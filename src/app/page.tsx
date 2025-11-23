@@ -78,152 +78,6 @@ export default function Home() {
     },
   };
 
-  // Market cards data with consistent heights
-  const marketCards = [
-    {
-      id: 1,
-      icon: <Currency className="w-8 h-8" />,
-      title: "Forex",
-      description:
-        "Trade 60+ currency pairs with tight spreads and instant execution. Access major, minor and exotic pairs.",
-      pairs: "60+ Pairs",
-      imageSrc:
-        "https://images.unsplash.com/photo-1613243555978-636c48dc653c?w=400&h=500&fit=crop&auto=format",
-      altText: "Forex Trading",
-      delay: 0,
-      height: "h-80",
-    },
-    {
-      id: 2,
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Stocks",
-      description:
-        "500+ global company shares from major stock exchanges worldwide. Invest in top companies.",
-      pairs: "500+ Stocks",
-      imageSrc:
-        "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=600&fit=crop&auto=format",
-      altText: "Stock Trading",
-      delay: 0.1,
-      height: "h-96",
-    },
-    {
-      id: 3,
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Indices",
-      description:
-        "Major global indices including S&P 500, NASDAQ, FTSE 100. Track world markets.",
-      pairs: "20+ Indices",
-      imageSrc:
-        "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&h=450&fit=crop&auto=format",
-      altText: "Indices Trading",
-      delay: 0.2,
-      height: "h-72",
-    },
-    {
-      id: 4,
-      icon: <Gem className="w-8 h-8" />,
-      title: "Commodities",
-      description:
-        "Gold, silver, oil and energy markets with competitive pricing. Diversify your portfolio.",
-      pairs: "15+ Commodities",
-      imageSrc:
-        "https://images.unsplash.com/photo-1622445275576-721325763afe?w=400&h=550&fit=crop&auto=format",
-      altText: "Commodities Trading",
-      delay: 0.3,
-      height: "h-84",
-    },
-    {
-      id: 5,
-      icon: <Bitcoin className="w-8 h-8" />,
-      title: "Crypto",
-      description:
-        "Bitcoin, Ethereum and major cryptocurrencies with 24/7 trading. Digital currency markets.",
-      pairs: "30+ Crypto Pairs",
-      imageSrc:
-        "https://images.unsplash.com/photo-1516245834210-8e0b6e0f8e1c?w=400&h=500&fit=crop&auto=format",
-      altText: "Cryptocurrency Trading",
-      delay: 0.4,
-      height: "h-80",
-    },
-    {
-      id: 6,
-      icon: <Zap className="w-8 h-8" />,
-      title: "ETFs",
-      description:
-        "Diversify with Exchange Traded Funds across various sectors and markets.",
-      pairs: "100+ ETFs",
-      imageSrc:
-        "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=480&fit=crop&auto=format",
-      altText: "ETF Trading",
-      delay: 0.5,
-      height: "h-76",
-    },
-  ];
-
-  // Platform features
-  const platformFeatures = [
-    {
-      icon: <BarChart3 className="w-10 h-10" />,
-      title: "Advanced Charting",
-      description:
-        "Professional charts with 80+ technical indicators and analytical tools",
-    },
-    {
-      icon: <Zap className="w-10 h-10" />,
-      title: "One-Click Trading",
-      description: "Execute trades instantly with single click execution",
-    },
-    {
-      icon: <TrendingUp className="w-10 h-10" />,
-      title: "Expert Advisors",
-      description: "Automate your trading with custom algorithms and robots",
-    },
-    {
-      icon: <Smartphone className="w-10 h-10" />,
-      title: "Mobile Trading",
-      description: "Trade anywhere with full-featured mobile applications",
-    },
-  ];
-
-  // Download links
-  const downloadLinks = [
-    {
-      icon: <Monitor className="w-6 h-6" />,
-      platform: "Windows",
-      description: "Desktop Platform",
-      link: "#",
-      type: "desktop",
-    },
-    {
-      icon: <Monitor className="w-6 h-6" />,
-      platform: "macOS",
-      description: "Desktop Platform",
-      link: "#",
-      type: "desktop",
-    },
-    {
-      icon: <Smartphone className="w-6 h-6" />,
-      platform: "Android",
-      description: "Mobile App",
-      link: "#",
-      type: "mobile",
-    },
-    {
-      icon: <Smartphone className="w-6 h-6" />,
-      platform: "iOS",
-      description: "Mobile App",
-      link: "#",
-      type: "mobile",
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      platform: "Web Platform",
-      description: "Browser Based",
-      link: "#",
-      type: "web",
-    },
-  ];
-
   return (
     <div className="min-h-screen">
       {/* Navbar */}
@@ -328,7 +182,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Trade Global Markets Section */}
+      {/* Our Services Section */}
       <section className="min-h-screen bg-background flex items-center justify-center py-20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -337,13 +191,14 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="max-w-7xl mx-auto text-center"
           >
+            {/* Section Header */}
             <motion.h2
               className="text-4xl md:text-5xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              Trade Global Markets
+              Our Services
             </motion.h2>
 
             <motion.p
@@ -352,41 +207,113 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Access 1000+ instruments across multiple asset classes with
-              competitive pricing
+              Comprehensive trading solutions designed to help you succeed
             </motion.p>
 
-            {/* Masonry Layout - Fixed */}
+            {/* Masonry Layout with Tilted Cards */}
             <Masonry columns={3} gap={24} className="mx-auto">
-              {marketCards.map((card) => (
+              {[
+                {
+                  id: 1,
+                  icon: <TrendingUp className="w-8 h-8" />,
+                  title: "Super Tight Spreads",
+                  description: "Enjoy competitive spreads starting from 0.0 pips on major currency pairs and competitive pricing across all assets",
+                  badge: "From 0.0 Pips",
+                  imageSrc: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&h=600&fit=crop&auto=format",
+                  altText: "Tight Spreads",
+                  gradient: "from-green-500 to-emerald-500",
+                  delay: 0,
+                  height: "h-96",
+                },
+                {
+                  id: 2,
+                  icon: <Zap className="w-8 h-8" />,
+                  title: "Ultra Fast Execution",
+                  description: "Lightning-fast order execution with minimal latency. Trade with confidence knowing your orders are executed instantly",
+                  badge: "Instant Execution",
+                  imageSrc: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=450&fit=crop&auto=format",
+                  altText: "Fast Execution",
+                  gradient: "from-yellow-500 to-orange-500",
+                  delay: 0.1,
+                  height: "h-72",
+                },
+                {
+                  id: 3,
+                  icon: <Copy className="w-8 h-8" />,
+                  title: "Copy Trading",
+                  description: "Follow and automatically copy the trades of successful traders. Perfect for beginners and busy professionals",
+                  badge: "1000+ Traders",
+                  imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=550&fit=crop&auto=format",
+                  altText: "Copy Trading",
+                  gradient: "from-purple-500 to-pink-500",
+                  delay: 0.2,
+                  height: "h-84",
+                },
+                {
+                  id: 4,
+                  icon: <HeadphonesIcon className="w-8 h-8" />,
+                  title: "24/7 Client Support",
+                  description: "Round-the-clock multilingual support team ready to assist you. Get help whenever you need it, day or night",
+                  badge: "24/7 Available",
+                  imageSrc: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=500&fit=crop&auto=format",
+                  altText: "Customer Support",
+                  gradient: "from-indigo-500 to-blue-500",
+                  delay: 0.3,
+                  height: "h-80",
+                },
+                {
+                  id: 5,
+                  icon: <GraduationCap className="w-8 h-8" />,
+                  title: "Smart Education",
+                  description: "Comprehensive educational resources including webinars, tutorials, market analysis, and trading guides for all levels",
+                  badge: "Free Resources",
+                  imageSrc: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=480&fit=crop&auto=format",
+                  altText: "Trading Education",
+                  gradient: "from-red-500 to-pink-500",
+                  delay: 0.4,
+                  height: "h-76",
+                },
+                {
+                  id: 6,
+                  icon: <Lock className="w-8 h-8" />,
+                  title: "Fund Security",
+                  description: "Your funds are protected with segregated accounts, negative balance protection, and tier-1 banking partnerships",
+                  badge: "Fully Protected",
+                  imageSrc: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=520&fit=crop&auto=format",
+                  altText: "Fund Security",
+                  gradient: "from-slate-500 to-gray-500",
+                  delay: 0.5,
+                  height: "h-82",
+                },
+              ].map((service) => (
                 <motion.div
-                  key={card.id}
+                  key={service.id}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: card.delay }}
+                  transition={{ duration: 0.6, delay: service.delay }}
                   className="mb-6"
                 >
                   <TiltedCard
-                    imageSrc={card.imageSrc}
-                    altText={card.altText}
-                    captionText={card.title}
-                    className={card.height}
+                    imageSrc={service.imageSrc}
+                    altText={service.altText}
+                    captionText={service.title}
+                    className={service.height}
                   >
                     <div className="absolute inset-0 z-10 p-6 flex flex-col justify-end">
                       <div className="flex items-center gap-3 mb-3">
                         <div className="p-2 rounded-lg bg-white/20 backdrop-blur-sm">
-                          {card.icon}
+                          {service.icon}
                         </div>
                         <h3 className="text-2xl font-bold text-white">
-                          {card.title}
+                          {service.title}
                         </h3>
                       </div>
                       <p className="text-white/90 mb-4 text-sm leading-relaxed line-clamp-3">
-                        {card.description}
+                        {service.description}
                       </p>
                       <div className="px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 inline-block">
                         <span className="text-sm font-semibold text-white">
-                          {card.pairs}
+                          {service.badge}
                         </span>
                       </div>
                     </div>
@@ -395,6 +322,7 @@ export default function Home() {
               ))}
             </Masonry>
 
+            {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -405,14 +333,13 @@ export default function Home() {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg"
               >
-                View All Instruments
+                Start Trading Now
               </Button>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Trading Platforms Section */}
       {/* Trading Platforms Section */}
       <section className="min-h-screen bg-[#f0f4f8] dark:bg-[#0f0b07] flex items-center justify-center py-20">
         <div className="container mx-auto px-4">
@@ -948,136 +875,6 @@ export default function Home() {
                   Contact Support
                 </Button>
               </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Our Services Section */}
-      <section className="min-h-screen bg-background flex items-center justify-center py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-7xl mx-auto text-center"
-          >
-            {/* Section Header */}
-            <motion.h2
-              className="text-4xl md:text-5xl font-bold mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              Our Services
-            </motion.h2>
-
-            <motion.p
-              className="text-xl text-muted-foreground mb-16 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Comprehensive trading solutions designed to help you succeed
-            </motion.p>
-
-            {/* Services Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: <Globe className="w-8 h-8" />,
-                  title: "Trade Global Markets",
-                  description: "Access 2000+ instruments across forex, stocks, indices, commodities, and cryptocurrencies from around the world",
-                  gradient: "from-blue-500 to-cyan-500",
-                  delay: 0,
-                },
-                {
-                  icon: <TrendingUp className="w-8 h-8" />,
-                  title: "Super Tight Spreads",
-                  description: "Enjoy competitive spreads starting from 0.0 pips on major currency pairs and competitive pricing across all assets",
-                  gradient: "from-green-500 to-emerald-500",
-                  delay: 0.1,
-                },
-                {
-                  icon: <Zap className="w-8 h-8" />,
-                  title: "Ultra Fast Execution",
-                  description: "Lightning-fast order execution with minimal latency. Trade with confidence knowing your orders are executed instantly",
-                  gradient: "from-yellow-500 to-orange-500",
-                  delay: 0.2,
-                },
-                {
-                  icon: <Copy className="w-8 h-8" />,
-                  title: "Copy Trading",
-                  description: "Follow and automatically copy the trades of successful traders. Perfect for beginners and busy professionals",
-                  gradient: "from-purple-500 to-pink-500",
-                  delay: 0.3,
-                },
-                {
-                  icon: <HeadphonesIcon className="w-8 h-8" />,
-                  title: "24/7 Client Support",
-                  description: "Round-the-clock multilingual support team ready to assist you. Get help whenever you need it, day or night",
-                  gradient: "from-indigo-500 to-blue-500",
-                  delay: 0.4,
-                },
-                {
-                  icon: <GraduationCap className="w-8 h-8" />,
-                  title: "Smart Education",
-                  description: "Comprehensive educational resources including webinars, tutorials, market analysis, and trading guides for all levels",
-                  gradient: "from-red-500 to-pink-500",
-                  delay: 0.5,
-                },
-                {
-                  icon: <Lock className="w-8 h-8" />,
-                  title: "Fund Security",
-                  description: "Your funds are protected with segregated accounts, negative balance protection, and tier-1 banking partnerships",
-                  gradient: "from-slate-500 to-gray-500",
-                  delay: 0.6,
-                },
-              ].map((service, index) => (
-                <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: service.delay }}
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  className="group relative"
-                >
-                  <div className="relative h-full p-6 rounded-2xl bg-card border border-border hover:border-white/20 shadow-lg hover:shadow-2xl transition-all duration-300 backdrop-blur-sm">
-                    {/* Icon */}
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <div className="text-white">
-                        {service.icon}
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <h3 className="text-xl font-bold mb-3 text-foreground">
-                      {service.title}
-                    </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-
-                    {/* Hover Glow Effect */}
-                    <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 blur-xl transition-opacity duration-300 -z-10`} />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-16"
-            >
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg"
-              >
-                Start Trading Now
-              </Button>
             </motion.div>
           </motion.div>
         </div>
