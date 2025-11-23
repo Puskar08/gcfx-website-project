@@ -665,12 +665,7 @@ export default function Home() {
 
       {/* Account Types Section */}
       {/* Account Types Section */}
-      <section className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center py-20">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-50/50 via-transparent to-transparent dark:from-blue-900/10" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,_var(--tw-gradient-stops))] from-purple-50/40 via-transparent to-transparent dark:from-purple-900/10" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_80%,_var(--tw-gradient-stops))] from-emerald-50/40 via-transparent to-transparent dark:from-emerald-900/10" />
-
+      <section className="min-h-screen bg-slate-50 dark:bg-slate-900 flex items-center justify-center py-20">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -716,9 +711,9 @@ export default function Home() {
                     "Mobile Trading",
                     "Free VPS Available",
                   ],
-                  bgColor: "bg-gradient-to-br from-blue-50 to-sky-50",
-                  borderColor: "border-blue-200",
-                  accentColor: "from-blue-500 to-sky-600",
+                  bgColor: "bg-white dark:bg-slate-800",
+                  borderColor: "border-slate-200 dark:border-slate-700",
+                  accentColor: "from-slate-600 to-slate-700",
                   icon: "📊",
                   delay: 0,
                 },
@@ -738,9 +733,9 @@ export default function Home() {
                     "Premium Analytics",
                     "Free VPS Included",
                   ],
-                  bgColor: "bg-gradient-to-br from-purple-50 to-violet-50",
-                  borderColor: "border-purple-200",
-                  accentColor: "from-purple-500 to-violet-600",
+                  bgColor: "bg-white dark:bg-slate-800",
+                  borderColor: "border-blue-200 dark:border-blue-900/50",
+                  accentColor: "from-blue-600 to-blue-700",
                   icon: "⚡",
                   popular: true,
                   delay: 0.1,
@@ -761,9 +756,9 @@ export default function Home() {
                     "24/5 Support",
                     "Mobile Trading",
                   ],
-                  bgColor: "bg-gradient-to-br from-emerald-50 to-teal-50",
-                  borderColor: "border-emerald-200",
-                  accentColor: "from-emerald-500 to-teal-600",
+                  bgColor: "bg-white dark:bg-slate-800",
+                  borderColor: "border-slate-200 dark:border-slate-700",
+                  accentColor: "from-slate-600 to-slate-700",
                   icon: "🕌",
                   delay: 0.2,
                 },
@@ -773,25 +768,20 @@ export default function Home() {
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   whileHover={{
-                    y: -6,
-                    rotateY: 8,
-                    rotateX: 2,
+                    y: -8,
+                    scale: 1.02,
                   }}
                   transition={{
-                    duration: 0.4,
+                    duration: 0.3,
                     type: "spring",
                     stiffness: 300,
                     damping: 20,
                   }}
                   className="relative group cursor-pointer"
-                  style={{
-                    transformStyle: "preserve-3d",
-                    perspective: "1000px",
-                  }}
                 >
                   {/* Card Container */}
                   <div
-                    className={`relative rounded-2xl ${account.bgColor} border ${account.borderColor} p-6 shadow-lg backdrop-blur-sm transition-all duration-300 group-hover:shadow-xl`}
+                    className={`relative rounded-2xl ${account.bgColor} border-2 ${account.borderColor} p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full`}
                   >
                     {/* Popular Badge */}
                     {account.popular && (
@@ -804,7 +794,7 @@ export default function Home() {
                         }}
                         className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10"
                       >
-                        <div className="bg-gradient-to-r from-purple-500 to-violet-600 text-white px-4 py-1 rounded-full text-xs font-medium shadow-lg">
+                        <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-1 rounded-full text-xs font-medium shadow-lg">
                           Most Popular
                         </div>
                       </motion.div>
@@ -842,7 +832,7 @@ export default function Home() {
                           duration: 0.4,
                           delay: account.delay + 0.1,
                         }}
-                        className="grid grid-cols-2 gap-3 mb-6 p-4 rounded-xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-sm border border-white/60 dark:border-slate-700/60 shadow-sm"
+                        className="grid grid-cols-2 gap-3 mb-6 p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700/50"
                       >
                         <div className="text-center">
                           <div className="text-xs text-slate-500 dark:text-gray-400 mb-1">
@@ -949,9 +939,9 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Glow Effect */}
+                  {/* Subtle Glow Effect */}
                   <div
-                    className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${account.accentColor} opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-300 -z-10`}
+                    className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${account.accentColor} opacity-0 group-hover:opacity-5 blur-xl transition-opacity duration-300 -z-10`}
                   />
                 </motion.div>
               ))}
@@ -962,7 +952,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="mt-12 p-6 rounded-xl bg-white/80 dark:bg-slate-800/60 backdrop-blur-sm border border-slate-200/60 dark:border-slate-700/60 shadow-lg"
+              className="mt-12 p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-lg"
             >
               <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-3">
                 Need help choosing?
