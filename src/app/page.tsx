@@ -608,7 +608,7 @@ export default function Home() {
               >
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                   <img
-                    src="/mt5-platform-devices.svg"
+                    src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/mt5platform-1763519063444-1763934595347.jpg?width=8000&height=8000&resize=contain"
                     alt="MetaTrader 5 Multi-Platform Trading"
                     className="w-full h-auto"
                   />
