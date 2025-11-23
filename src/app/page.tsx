@@ -621,8 +621,8 @@ export default function Home() {
 
                   {/* Platform Info */}
                   <div className="absolute bottom-4 left-4">
-                    <h3 className="text-lg font-bold mb-1 text-black">MetaTrader 5</h3>
-                    <p className="text-black text-sm">
+                    <h3 className="text-lg font-bold mb-1 text-white">MetaTrader 5</h3>
+                    <p className="text-white text-sm">
                       Desktop, Web & Mobile Trading
                     </p>
                   </div>
