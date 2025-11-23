@@ -296,7 +296,6 @@ export default function Home() {
                   <TiltedCard
                     imageSrc={market.imageSrc}
                     altText={market.altText}
-                    captionText={market.title}
                     className={market.height}
                   >
                     <div className="absolute inset-0 z-10 p-6 flex flex-col justify-end">
