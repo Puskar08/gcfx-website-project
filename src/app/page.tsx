@@ -992,7 +992,6 @@ export default function Home() {
                   <TiltedCard
                     imageSrc={service.imageSrc}
                     altText={service.altText}
-                    captionText={service.title}
                     className={service.height}
                   >
                     <div className="absolute inset-0 z-10 p-6 flex flex-col justify-end">
