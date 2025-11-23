@@ -608,27 +608,22 @@ export default function Home() {
               >
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                   <img
-                    src="https://www.metatrader5.com/img/og/en/mt5-web-trading.jpg"
-                    alt="MetaTrader 5 Web Platform"
+                    src="/mt5-platform-devices.svg"
+                    alt="MetaTrader 5 Multi-Platform Trading"
                     className="w-full h-auto"
-                    onError={(e) => {
-                      // Fallback image if the MT5 image fails to load
-                      e.currentTarget.src =
-                        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&auto=format";
-                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
 
                   {/* Platform Badge */}
                   <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full font-bold text-xs">
-                    MT5 Web Platform
+                    MT5 Multi-Platform
                   </div>
 
                   {/* Platform Info */}
                   <div className="absolute bottom-4 left-4 text-white">
                     <h3 className="text-lg font-bold mb-1">MetaTrader 5</h3>
                     <p className="text-gray-300 text-sm">
-                      Web & Mobile Trading
+                      Desktop, Web & Mobile Trading
                     </p>
                   </div>
                 </div>
