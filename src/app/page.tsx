@@ -340,6 +340,164 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trade Global Markets Section */}
+      <section className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-7xl mx-auto text-center"
+          >
+            {/* Section Header */}
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Trade Global Markets
+            </motion.h2>
+
+            <motion.p
+              className="text-xl text-muted-foreground mb-16 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              Access over 2000+ trading instruments across multiple asset classes
+            </motion.p>
+
+            {/* Masonry Layout with Tilted Cards */}
+            <Masonry columns={3} gap={24} className="mx-auto">
+              {[
+                {
+                  id: 1,
+                  icon: <Currency className="w-8 h-8" />,
+                  title: "Forex",
+                  description: "Trade major, minor, and exotic currency pairs with competitive spreads",
+                  badge: "60+ Pairs",
+                  imageSrc: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=400&h=600&fit=crop&auto=format",
+                  altText: "Forex Trading",
+                  gradient: "from-blue-500 to-cyan-500",
+                  delay: 0,
+                  height: "h-96",
+                },
+                {
+                  id: 2,
+                  icon: <TrendingUp className="w-8 h-8" />,
+                  title: "Stocks",
+                  description: "Access global stock markets and trade shares of leading companies",
+                  badge: "500+ Stocks",
+                  imageSrc: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=450&fit=crop&auto=format",
+                  altText: "Stock Trading",
+                  gradient: "from-green-500 to-emerald-500",
+                  delay: 0.1,
+                  height: "h-72",
+                },
+                {
+                  id: 3,
+                  icon: <BarChart3 className="w-8 h-8" />,
+                  title: "Indices",
+                  description: "Trade the world's most popular stock indices with tight spreads",
+                  badge: "30+ Indices",
+                  imageSrc: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&h=550&fit=crop&auto=format",
+                  altText: "Indices Trading",
+                  gradient: "from-purple-500 to-pink-500",
+                  delay: 0.2,
+                  height: "h-84",
+                },
+                {
+                  id: 4,
+                  icon: <Gem className="w-8 h-8" />,
+                  title: "Commodities",
+                  description: "Trade precious metals, energies, and agricultural commodities",
+                  badge: "50+ Commodities",
+                  imageSrc: "https://images.unsplash.com/photo-1610375461246-83df859d849d?w=400&h=500&fit=crop&auto=format",
+                  altText: "Commodities Trading",
+                  gradient: "from-yellow-500 to-orange-500",
+                  delay: 0.3,
+                  height: "h-80",
+                },
+                {
+                  id: 5,
+                  icon: <Bitcoin className="w-8 h-8" />,
+                  title: "Crypto",
+                  description: "Trade popular cryptocurrencies 24/7 with leverage",
+                  badge: "20+ Cryptos",
+                  imageSrc: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=400&h=480&fit=crop&auto=format",
+                  altText: "Crypto Trading",
+                  gradient: "from-orange-500 to-red-500",
+                  delay: 0.4,
+                  height: "h-76",
+                },
+                {
+                  id: 6,
+                  icon: <Globe className="w-8 h-8" />,
+                  title: "ETFs",
+                  description: "Diversify your portfolio with Exchange-Traded Funds",
+                  badge: "100+ ETFs",
+                  imageSrc: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=520&fit=crop&auto=format",
+                  altText: "ETF Trading",
+                  gradient: "from-indigo-500 to-blue-500",
+                  delay: 0.5,
+                  height: "h-82",
+                },
+              ].map((market) => (
+                <motion.div
+                  key={market.id}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: market.delay }}
+                  className="mb-6"
+                >
+                  <TiltedCard
+                    imageSrc={market.imageSrc}
+                    altText={market.altText}
+                    captionText={market.title}
+                    className={market.height}
+                  >
+                    <div className="absolute inset-0 z-10 p-6 flex flex-col justify-end">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="p-2 rounded-lg bg-white/20 backdrop-blur-sm">
+                          {market.icon}
+                        </div>
+                        <h3 className="text-2xl font-bold text-white">
+                          {market.title}
+                        </h3>
+                      </div>
+                      <p className="text-white/90 mb-4 text-sm leading-relaxed line-clamp-3">
+                        {market.description}
+                      </p>
+                      <div className="px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 inline-block">
+                        <span className="text-sm font-semibold text-white">
+                          {market.badge}
+                        </span>
+                      </div>
+                    </div>
+                  </TiltedCard>
+                </motion.div>
+              ))}
+            </Masonry>
+
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="mt-16"
+            >
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg"
+              >
+                Explore All Markets
+              </Button>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Trading Platforms Section */}
       <section className="min-h-screen bg-[#f0f4f8] dark:bg-[#0f0b07] flex items-center justify-center py-20">
         <div className="container mx-auto px-4">
@@ -593,7 +751,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Account Types Section */}
       {/* Account Types Section */}
       <section className="min-h-screen bg-slate-50 dark:bg-background flex items-center justify-center py-20">
         <div className="container mx-auto px-4 relative z-10">
