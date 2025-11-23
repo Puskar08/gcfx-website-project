@@ -411,7 +411,7 @@ export default function Home() {
 
       {/* Trading Platforms Section */}
       {/* Trading Platforms Section */}
-      <section className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center py-20">
+      <section className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 dark:from-slate-900 dark:via-blue-900/30 dark:to-slate-800 flex items-center justify-center py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -421,7 +421,7 @@ export default function Home() {
           >
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left Content */}
-              <div className="text-white">
+              <div className="text-slate-800 dark:text-white">
                 <motion.h2
                   className="text-4xl md:text-5xl font-bold mb-6"
                   initial={{ opacity: 0, y: 30 }}
@@ -432,7 +432,7 @@ export default function Home() {
                 </motion.h2>
 
                 <motion.p
-                  className="text-xl text-gray-300 mb-8"
+                  className="text-xl text-slate-600 dark:text-gray-300 mb-8"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -472,16 +472,16 @@ export default function Home() {
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                      className="flex items-start gap-3 p-4 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
+                      className="flex items-start gap-3 p-4 rounded-lg bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10 hover:bg-white/80 dark:hover:bg-white/10 transition-all duration-300"
                     >
-                      <div className="text-blue-400 mt-0.5 shrink-0">
+                      <div className="text-blue-600 dark:text-blue-400 mt-0.5 shrink-0">
                         {feature.icon}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-sm font-semibold mb-1 text-white">
+                        <h3 className="text-sm font-semibold mb-1 text-slate-800 dark:text-white">
                           {feature.title}
                         </h3>
-                        <p className="text-gray-400 text-xs leading-relaxed">
+                        <p className="text-slate-600 dark:text-gray-400 text-xs leading-relaxed">
                           {feature.description}
                         </p>
                       </div>
@@ -495,7 +495,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
                 >
-                  <h3 className="text-xl font-bold mb-6 text-white">
+                  <h3 className="text-xl font-bold mb-6 text-slate-800 dark:text-white">
                     Download MT5 Platform
                   </h3>
                   <div className="flex flex-wrap gap-4">
@@ -586,12 +586,12 @@ export default function Home() {
                         className={`flex flex-col items-center justify-center w-20 h-20 rounded-xl border-2 transition-all duration-300 ${platform.bgColor} ${platform.borderColor} group cursor-pointer`}
                         title={`Download for ${platform.platform}`}
                       >
-                        <div className="text-white mb-1">{platform.icon}</div>
-                        <span className="text-xs font-medium text-white group-hover:text-blue-200 transition-colors">
+                        <div className="text-slate-700 dark:text-white mb-1">{platform.icon}</div>
+                        <span className="text-xs font-medium text-slate-700 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-200 transition-colors">
                           {platform.platform}
                         </span>
                         <div className="absolute -bottom-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <Download className="w-3 h-3 text-white" />
+                          <Download className="w-3 h-3 text-slate-700 dark:text-white" />
                         </div>
                       </motion.a>
                     ))}
@@ -606,7 +606,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="relative"
               >
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-white/20">
                   <img
                     src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/mt5platform-1763519063444-1763934595347.jpg?width=8000&height=8000&resize=contain"
                     alt="MetaTrader 5 Multi-Platform Trading"
@@ -630,17 +630,17 @@ export default function Home() {
                   transition={{ duration: 0.6, delay: 0.8 }}
                   className="grid grid-cols-3 gap-4 mt-6"
                 >
-                  <div className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-                    <div className="text-2xl font-bold text-blue-400">80+</div>
-                    <div className="text-xs text-gray-400 mt-1">Indicators</div>
+                  <div className="text-center p-3 rounded-lg bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10">
+                    <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">80+</div>
+                    <div className="text-xs text-slate-600 dark:text-gray-400 mt-1">Indicators</div>
                   </div>
-                  <div className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-                    <div className="text-2xl font-bold text-green-400">21</div>
-                    <div className="text-xs text-gray-400 mt-1">Timeframes</div>
+                  <div className="text-center p-3 rounded-lg bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10">
+                    <div className="text-2xl font-bold text-green-600 dark:text-green-400">21</div>
+                    <div className="text-xs text-slate-600 dark:text-gray-400 mt-1">Timeframes</div>
                   </div>
-                  <div className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10">
-                    <div className="text-2xl font-bold text-purple-400">6</div>
-                    <div className="text-xs text-gray-400 mt-1">
+                  <div className="text-center p-3 rounded-lg bg-white/60 dark:bg-white/5 backdrop-blur-sm border border-slate-200 dark:border-white/10">
+                    <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">6</div>
+                    <div className="text-xs text-slate-600 dark:text-gray-400 mt-1">
                       Order Types
                     </div>
                   </div>
