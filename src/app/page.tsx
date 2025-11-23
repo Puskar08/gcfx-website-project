@@ -267,7 +267,7 @@ export default function Home() {
                   title: "Crypto",
                   description: "Trade popular cryptocurrencies 24/7 with leverage",
                   badge: "20+ Cryptos",
-                  imageSrc: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=400&h=480&fit=crop&auto=format",
+                  imageSrc: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/project-uploads/28aaec83-16b3-459d-a24f-c7d65216651b/generated_images/modern-cryptocurrency-trading-concept-di-03e55f6e-20251123233127.jpg",
                   altText: "Crypto Trading",
                   gradient: "from-orange-500 to-red-500",
                   delay: 0.4,
