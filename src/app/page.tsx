@@ -711,8 +711,8 @@ export default function Home() {
                     "Mobile Trading",
                     "Free VPS Available",
                   ],
-                  bgColor: "bg-white dark:bg-slate-800",
-                  borderColor: "border-slate-200 dark:border-slate-700",
+                  bgColor: "bg-white dark:bg-slate-900/50",
+                  borderColor: "border-slate-200 dark:border-slate-700/50",
                   accentColor: "from-slate-600 to-slate-700",
                   icon: "📊",
                   delay: 0,
@@ -733,11 +733,10 @@ export default function Home() {
                     "Premium Analytics",
                     "Free VPS Included",
                   ],
-                  bgColor: "bg-white dark:bg-slate-800",
-                  borderColor: "border-blue-200 dark:border-blue-900/50",
+                  bgColor: "bg-white dark:bg-slate-900/50",
+                  borderColor: "border-blue-300 dark:border-blue-700/50",
                   accentColor: "from-blue-600 to-blue-700",
                   icon: "⚡",
-                  popular: true,
                   delay: 0.1,
                 },
                 {
@@ -756,8 +755,8 @@ export default function Home() {
                     "24/5 Support",
                     "Mobile Trading",
                   ],
-                  bgColor: "bg-white dark:bg-slate-800",
-                  borderColor: "border-slate-200 dark:border-slate-700",
+                  bgColor: "bg-white dark:bg-slate-900/50",
+                  borderColor: "border-slate-200 dark:border-slate-700/50",
                   accentColor: "from-slate-600 to-slate-700",
                   icon: "🕌",
                   delay: 0.2,
@@ -781,25 +780,8 @@ export default function Home() {
                 >
                   {/* Card Container */}
                   <div
-                    className={`relative rounded-2xl ${account.bgColor} border-2 ${account.borderColor} p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full`}
+                    className={`relative rounded-2xl ${account.bgColor} border-2 ${account.borderColor} p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full backdrop-blur-sm`}
                   >
-                    {/* Popular Badge */}
-                    {account.popular && (
-                      <motion.div
-                        initial={{ scale: 0 }}
-                        whileInView={{ scale: 1 }}
-                        transition={{
-                          duration: 0.4,
-                          delay: account.delay + 0.2,
-                        }}
-                        className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10"
-                      >
-                        <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-1 rounded-full text-xs font-medium shadow-lg">
-                          Most Popular
-                        </div>
-                      </motion.div>
-                    )}
-
                     {/* Content */}
                     <div className="relative">
                       {/* Account Header */}
@@ -832,7 +814,7 @@ export default function Home() {
                           duration: 0.4,
                           delay: account.delay + 0.1,
                         }}
-                        className="grid grid-cols-2 gap-3 mb-6 p-4 rounded-xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700/50"
+                        className="grid grid-cols-2 gap-3 mb-6 p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/50"
                       >
                         <div className="text-center">
                           <div className="text-xs text-slate-500 dark:text-gray-400 mb-1">
