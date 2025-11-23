@@ -183,7 +183,7 @@ export default function Home() {
       </section>
 
       {/* Trade Global Markets Section */}
-      <section className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center py-20">
+      <section className="min-h-screen bg-background flex items-center justify-center py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
