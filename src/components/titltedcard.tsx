@@ -59,6 +59,7 @@ export default function TiltedCard({
       style={{
         transformStyle: "preserve-3d",
         perspective: "1000px",
+        transform: "translate3d(0, 0, 0)",
       }}
     >
       <div
@@ -66,6 +67,8 @@ export default function TiltedCard({
         style={{
           backfaceVisibility: "hidden",
           WebkitBackfaceVisibility: "hidden",
+          transform: "translate3d(0, 0, 0)",
+          filter: "blur(0px)",
         }}
       >
         {/* Background Image */}
@@ -75,19 +78,21 @@ export default function TiltedCard({
             backgroundImage: `url(${imageSrc})`,
             backfaceVisibility: "hidden",
             WebkitBackfaceVisibility: "hidden",
+            transform: "translate3d(0, 0, 0)",
           }}
         />
 
-        {/* Content Overlay - Enhanced fix for text clarity */}
+        {/* Content Overlay - Maximum anti-blur optimization */}
         <div 
           className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
           style={{
-            transform: "translateZ(1px)",
+            transform: "translate3d(0, 0, 1px)",
             backfaceVisibility: "hidden",
             WebkitBackfaceVisibility: "hidden",
             WebkitFontSmoothing: "antialiased",
             MozOsxFontSmoothing: "grayscale",
             willChange: "transform",
+            filter: "blur(0px)",
           }}
         >
           <div
@@ -96,7 +101,10 @@ export default function TiltedCard({
               WebkitBackfaceVisibility: "hidden",
               WebkitFontSmoothing: "antialiased",
               MozOsxFontSmoothing: "grayscale",
-              textRendering: "optimizeLegibility",
+              textRendering: "geometricPrecision",
+              transform: "translate3d(0, 0, 0)",
+              filter: "blur(0px)",
+              fontSmooth: "always",
             }}
           >
             {children}
@@ -108,12 +116,13 @@ export default function TiltedCard({
           <div 
             className="absolute bottom-4 left-4 text-white font-semibold text-lg"
             style={{
-              transform: "translateZ(1px)",
+              transform: "translate3d(0, 0, 1px)",
               backfaceVisibility: "hidden",
               WebkitBackfaceVisibility: "hidden",
               WebkitFontSmoothing: "antialiased",
               MozOsxFontSmoothing: "grayscale",
-              textRendering: "optimizeLegibility",
+              textRendering: "geometricPrecision",
+              filter: "blur(0px)",
             }}
           >
             {captionText}
