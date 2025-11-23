@@ -411,7 +411,7 @@ export default function Home() {
 
       {/* Trading Platforms Section */}
       {/* Trading Platforms Section */}
-      <section className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 dark:from-slate-900 dark:via-blue-900/30 dark:to-slate-800 flex items-center justify-center py-20">
+      <section className="min-h-screen bg-[#f0f4f8] dark:bg-[#0f0b07] flex items-center justify-center py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
