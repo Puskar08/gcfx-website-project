@@ -58,28 +58,49 @@ export default function TiltedCard({
       }}
       style={{
         transformStyle: "preserve-3d",
+        perspective: "1000px",
       }}
     >
       <div
         className="relative overflow-hidden rounded-2xl shadow-2xl transition-all duration-300 group-hover:shadow-2xl"
+        style={{
+          backfaceVisibility: "hidden",
+          WebkitBackfaceVisibility: "hidden",
+        }}
       >
         {/* Background Image */}
         <div
           className="w-full h-80 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-          style={{ backgroundImage: `url(${imageSrc})` }}
+          style={{ 
+            backgroundImage: `url(${imageSrc})`,
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+          }}
         />
 
-        {/* Content Overlay - Fixed for text clarity */}
+        {/* Content Overlay - Enhanced fix for text clarity */}
         <div 
           className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
           style={{
+            transform: "translateZ(1px)",
             backfaceVisibility: "hidden",
             WebkitBackfaceVisibility: "hidden",
-            transform: "translateZ(0)",
             WebkitFontSmoothing: "antialiased",
+            MozOsxFontSmoothing: "grayscale",
+            willChange: "transform",
           }}
         >
-          {children}
+          <div
+            style={{
+              backfaceVisibility: "hidden",
+              WebkitBackfaceVisibility: "hidden",
+              WebkitFontSmoothing: "antialiased",
+              MozOsxFontSmoothing: "grayscale",
+              textRendering: "optimizeLegibility",
+            }}
+          >
+            {children}
+          </div>
         </div>
 
         {/* Caption */}
@@ -87,10 +108,12 @@ export default function TiltedCard({
           <div 
             className="absolute bottom-4 left-4 text-white font-semibold text-lg"
             style={{
+              transform: "translateZ(1px)",
               backfaceVisibility: "hidden",
               WebkitBackfaceVisibility: "hidden",
-              transform: "translateZ(0)",
               WebkitFontSmoothing: "antialiased",
+              MozOsxFontSmoothing: "grayscale",
+              textRendering: "optimizeLegibility",
             }}
           >
             {captionText}
