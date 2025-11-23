@@ -614,11 +614,6 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
 
-                  {/* Platform Badge */}
-                  <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full font-bold text-xs">
-                    MT5 Multi-Platform
-                  </div>
-
                   {/* Platform Info */}
                   <div className="absolute bottom-4 left-4">
                     <h3 className="text-lg font-bold mb-1 text-white">MetaTrader 5</h3>
