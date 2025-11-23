@@ -720,7 +720,7 @@ export default function Home() {
                 {
                   type: "Pro",
                   title: "Professional Account",
-                  description: "Advanced features for experienced traders",
+                  description: "For Experience Traders",
                   minDeposit: "$500",
                   spread: "From 0.0 pips",
                   commission: "$3.5 per lot",
@@ -728,7 +728,6 @@ export default function Home() {
                   features: [
                     "Raw Spreads",
                     "Priority Execution",
-                    "Advanced Tools",
                     "Dedicated Manager",
                     "Premium Analytics",
                     "Free VPS Included",
