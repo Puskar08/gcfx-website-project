@@ -16,6 +16,9 @@ import {
   Smartphone,
   Monitor,
   Globe,
+  Copy,
+  GraduationCap,
+  Lock,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -945,6 +948,136 @@ export default function Home() {
                   Contact Support
                 </Button>
               </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Our Services Section */}
+      <section className="min-h-screen bg-background flex items-center justify-center py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-7xl mx-auto text-center"
+          >
+            {/* Section Header */}
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Our Services
+            </motion.h2>
+
+            <motion.p
+              className="text-xl text-muted-foreground mb-16 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              Comprehensive trading solutions designed to help you succeed
+            </motion.p>
+
+            {/* Services Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: <Globe className="w-8 h-8" />,
+                  title: "Trade Global Markets",
+                  description: "Access 2000+ instruments across forex, stocks, indices, commodities, and cryptocurrencies from around the world",
+                  gradient: "from-blue-500 to-cyan-500",
+                  delay: 0,
+                },
+                {
+                  icon: <TrendingUp className="w-8 h-8" />,
+                  title: "Super Tight Spreads",
+                  description: "Enjoy competitive spreads starting from 0.0 pips on major currency pairs and competitive pricing across all assets",
+                  gradient: "from-green-500 to-emerald-500",
+                  delay: 0.1,
+                },
+                {
+                  icon: <Zap className="w-8 h-8" />,
+                  title: "Ultra Fast Execution",
+                  description: "Lightning-fast order execution with minimal latency. Trade with confidence knowing your orders are executed instantly",
+                  gradient: "from-yellow-500 to-orange-500",
+                  delay: 0.2,
+                },
+                {
+                  icon: <Copy className="w-8 h-8" />,
+                  title: "Copy Trading",
+                  description: "Follow and automatically copy the trades of successful traders. Perfect for beginners and busy professionals",
+                  gradient: "from-purple-500 to-pink-500",
+                  delay: 0.3,
+                },
+                {
+                  icon: <HeadphonesIcon className="w-8 h-8" />,
+                  title: "24/7 Client Support",
+                  description: "Round-the-clock multilingual support team ready to assist you. Get help whenever you need it, day or night",
+                  gradient: "from-indigo-500 to-blue-500",
+                  delay: 0.4,
+                },
+                {
+                  icon: <GraduationCap className="w-8 h-8" />,
+                  title: "Smart Education",
+                  description: "Comprehensive educational resources including webinars, tutorials, market analysis, and trading guides for all levels",
+                  gradient: "from-red-500 to-pink-500",
+                  delay: 0.5,
+                },
+                {
+                  icon: <Lock className="w-8 h-8" />,
+                  title: "Fund Security",
+                  description: "Your funds are protected with segregated accounts, negative balance protection, and tier-1 banking partnerships",
+                  gradient: "from-slate-500 to-gray-500",
+                  delay: 0.6,
+                },
+              ].map((service, index) => (
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: service.delay }}
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  className="group relative"
+                >
+                  <div className="relative h-full p-6 rounded-2xl bg-card border border-border hover:border-white/20 shadow-lg hover:shadow-2xl transition-all duration-300 backdrop-blur-sm">
+                    {/* Icon */}
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <div className="text-white">
+                        {service.icon}
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <h3 className="text-xl font-bold mb-3 text-foreground">
+                      {service.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    {/* Hover Glow Effect */}
+                    <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${service.gradient} opacity-0 group-hover:opacity-5 blur-xl transition-opacity duration-300 -z-10`} />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="mt-16"
+            >
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg"
+              >
+                Start Trading Now
+              </Button>
             </motion.div>
           </motion.div>
         </div>
