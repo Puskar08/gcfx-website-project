@@ -665,7 +665,7 @@ export default function Home() {
 
       {/* Account Types Section */}
       {/* Account Types Section */}
-      <section className="min-h-screen bg-slate-50 dark:bg-slate-900 flex items-center justify-center py-20">
+      <section className="min-h-screen bg-slate-50 dark:bg-background flex items-center justify-center py-20">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
