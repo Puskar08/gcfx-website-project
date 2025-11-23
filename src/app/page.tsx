@@ -779,10 +779,10 @@ export default function Home() {
                 >
                   {/* Card Container */}
                   <div
-                    className={`relative rounded-2xl ${account.bgColor} border-2 ${account.borderColor} p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full backdrop-blur-sm`}
+                    className={`relative rounded-2xl ${account.bgColor} border-2 ${account.borderColor} p-6 shadow-lg hover:shadow-2xl transition-all duration-300 h-full backdrop-blur-sm flex flex-col`}
                   >
                     {/* Content */}
-                    <div className="relative">
+                    <div className="relative flex-1 flex flex-col">
                       {/* Account Header */}
                       <div className="text-center mb-6">
                         <motion.div
@@ -850,7 +850,7 @@ export default function Home() {
                       </motion.div>
 
                       {/* Features List */}
-                      <div className="space-y-2 mb-6">
+                      <div className="space-y-2 mb-6 flex-1">
                         {account.features.map((feature, featureIndex) => (
                           <motion.div
                             key={feature}
@@ -895,26 +895,14 @@ export default function Home() {
                           duration: 0.4,
                           delay: account.delay + 0.4,
                         }}
-                        whileHover={{ scale: 1.02 }}
+                        whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.98 }}
+                        className="mt-auto"
                       >
                         <button
-                          className={`w-full py-3 rounded-xl bg-gradient-to-r ${account.accentColor} text-white font-medium text-sm shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2`}
+                          className="w-full py-3 px-4 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-sm hover:bg-white/30 transition-all duration-300 flex items-center justify-center gap-2"
                         >
                           Open Account
-                          <svg
-                            className="w-4 h-4"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            />
-                          </svg>
                         </button>
                       </motion.div>
                     </div>
