@@ -58,7 +58,6 @@ export default function TiltedCard({
       }}
       style={{
         transformStyle: "preserve-3d",
-        perspective: "1000px",
       }}
     >
       <div className="relative overflow-hidden rounded-2xl shadow-2xl transition-all duration-300 group-hover:shadow-2xl">
@@ -69,28 +68,13 @@ export default function TiltedCard({
         />
 
         {/* Content Overlay */}
-        <div 
-          className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"
-          style={{
-            backfaceVisibility: "hidden",
-            WebkitBackfaceVisibility: "hidden",
-            WebkitFontSmoothing: "antialiased",
-            MozOsxFontSmoothing: "grayscale",
-          }}
-        >
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
           {children}
         </div>
 
         {/* Caption */}
         {captionText && (
-          <div 
-            className="absolute bottom-4 left-4 text-white font-semibold text-lg"
-            style={{
-              backfaceVisibility: "hidden",
-              WebkitBackfaceVisibility: "hidden",
-              WebkitFontSmoothing: "antialiased",
-            }}
-          >
+          <div className="absolute bottom-4 left-4 text-white font-semibold text-lg">
             {captionText}
           </div>
         )}
