@@ -182,164 +182,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Our Services Section */}
-      <section className="min-h-screen bg-background flex items-center justify-center py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-7xl mx-auto text-center"
-          >
-            {/* Section Header */}
-            <motion.h2
-              className="text-4xl md:text-5xl font-bold mb-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              Our Services
-            </motion.h2>
-
-            <motion.p
-              className="text-xl text-muted-foreground mb-16 max-w-3xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Comprehensive trading solutions designed to help you succeed
-            </motion.p>
-
-            {/* Masonry Layout with Tilted Cards */}
-            <Masonry columns={3} gap={24} className="mx-auto">
-              {[
-                {
-                  id: 1,
-                  icon: <TrendingUp className="w-8 h-8" />,
-                  title: "Super Tight Spreads",
-                  description: "Enjoy competitive spreads starting from 0.0 pips on major currency pairs and competitive pricing across all assets",
-                  badge: "From 0.0 Pips",
-                  imageSrc: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&h=600&fit=crop&auto=format",
-                  altText: "Tight Spreads",
-                  gradient: "from-green-500 to-emerald-500",
-                  delay: 0,
-                  height: "h-96",
-                },
-                {
-                  id: 2,
-                  icon: <Zap className="w-8 h-8" />,
-                  title: "Ultra Fast Execution",
-                  description: "Lightning-fast order execution with minimal latency. Trade with confidence knowing your orders are executed instantly",
-                  badge: "Instant Execution",
-                  imageSrc: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=450&fit=crop&auto=format",
-                  altText: "Fast Execution",
-                  gradient: "from-yellow-500 to-orange-500",
-                  delay: 0.1,
-                  height: "h-72",
-                },
-                {
-                  id: 3,
-                  icon: <Copy className="w-8 h-8" />,
-                  title: "Copy Trading",
-                  description: "Follow and automatically copy the trades of successful traders. Perfect for beginners and busy professionals",
-                  badge: "1000+ Traders",
-                  imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=550&fit=crop&auto=format",
-                  altText: "Copy Trading",
-                  gradient: "from-purple-500 to-pink-500",
-                  delay: 0.2,
-                  height: "h-84",
-                },
-                {
-                  id: 4,
-                  icon: <HeadphonesIcon className="w-8 h-8" />,
-                  title: "24/7 Client Support",
-                  description: "Round-the-clock multilingual support team ready to assist you. Get help whenever you need it, day or night",
-                  badge: "24/7 Available",
-                  imageSrc: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=500&fit=crop&auto=format",
-                  altText: "Customer Support",
-                  gradient: "from-indigo-500 to-blue-500",
-                  delay: 0.3,
-                  height: "h-80",
-                },
-                {
-                  id: 5,
-                  icon: <GraduationCap className="w-8 h-8" />,
-                  title: "Smart Education",
-                  description: "Comprehensive educational resources including webinars, tutorials, market analysis, and trading guides for all levels",
-                  badge: "Free Resources",
-                  imageSrc: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=480&fit=crop&auto=format",
-                  altText: "Trading Education",
-                  gradient: "from-red-500 to-pink-500",
-                  delay: 0.4,
-                  height: "h-76",
-                },
-                {
-                  id: 6,
-                  icon: <Lock className="w-8 h-8" />,
-                  title: "Fund Security",
-                  description: "Your funds are protected with segregated accounts, negative balance protection, and tier-1 banking partnerships",
-                  badge: "Fully Protected",
-                  imageSrc: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=520&fit=crop&auto=format",
-                  altText: "Fund Security",
-                  gradient: "from-slate-500 to-gray-500",
-                  delay: 0.5,
-                  height: "h-82",
-                },
-              ].map((service) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: service.delay }}
-                  className="mb-6"
-                >
-                  <TiltedCard
-                    imageSrc={service.imageSrc}
-                    altText={service.altText}
-                    captionText={service.title}
-                    className={service.height}
-                  >
-                    <div className="absolute inset-0 z-10 p-6 flex flex-col justify-end">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2 rounded-lg bg-white/20 backdrop-blur-sm">
-                          {service.icon}
-                        </div>
-                        <h3 className="text-2xl font-bold text-white">
-                          {service.title}
-                        </h3>
-                      </div>
-                      <p className="text-white/90 mb-4 text-sm leading-relaxed line-clamp-3">
-                        {service.description}
-                      </p>
-                      <div className="px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 inline-block">
-                        <span className="text-sm font-semibold text-white">
-                          {service.badge}
-                        </span>
-                      </div>
-                    </div>
-                  </TiltedCard>
-                </motion.div>
-              ))}
-            </Masonry>
-
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="mt-16"
-            >
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg"
-              >
-                Start Trading Now
-              </Button>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Trade Global Markets Section */}
       <section className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center py-20">
         <div className="container mx-auto px-4">
@@ -1032,6 +874,164 @@ export default function Home() {
                   Contact Support
                 </Button>
               </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Our Services Section */}
+      <section className="min-h-screen bg-background flex items-center justify-center py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-7xl mx-auto text-center"
+          >
+            {/* Section Header */}
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Our Services
+            </motion.h2>
+
+            <motion.p
+              className="text-xl text-muted-foreground mb-16 max-w-3xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              Comprehensive trading solutions designed to help you succeed
+            </motion.p>
+
+            {/* Masonry Layout with Tilted Cards */}
+            <Masonry columns={3} gap={24} className="mx-auto">
+              {[
+                {
+                  id: 1,
+                  icon: <TrendingUp className="w-8 h-8" />,
+                  title: "Super Tight Spreads",
+                  description: "Enjoy competitive spreads starting from 0.0 pips on major currency pairs and competitive pricing across all assets",
+                  badge: "From 0.0 Pips",
+                  imageSrc: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=400&h=600&fit=crop&auto=format",
+                  altText: "Tight Spreads",
+                  gradient: "from-green-500 to-emerald-500",
+                  delay: 0,
+                  height: "h-96",
+                },
+                {
+                  id: 2,
+                  icon: <Zap className="w-8 h-8" />,
+                  title: "Ultra Fast Execution",
+                  description: "Lightning-fast order execution with minimal latency. Trade with confidence knowing your orders are executed instantly",
+                  badge: "Instant Execution",
+                  imageSrc: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=450&fit=crop&auto=format",
+                  altText: "Fast Execution",
+                  gradient: "from-yellow-500 to-orange-500",
+                  delay: 0.1,
+                  height: "h-72",
+                },
+                {
+                  id: 3,
+                  icon: <Copy className="w-8 h-8" />,
+                  title: "Copy Trading",
+                  description: "Follow and automatically copy the trades of successful traders. Perfect for beginners and busy professionals",
+                  badge: "1000+ Traders",
+                  imageSrc: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=550&fit=crop&auto=format",
+                  altText: "Copy Trading",
+                  gradient: "from-purple-500 to-pink-500",
+                  delay: 0.2,
+                  height: "h-84",
+                },
+                {
+                  id: 4,
+                  icon: <HeadphonesIcon className="w-8 h-8" />,
+                  title: "24/7 Client Support",
+                  description: "Round-the-clock multilingual support team ready to assist you. Get help whenever you need it, day or night",
+                  badge: "24/7 Available",
+                  imageSrc: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=500&fit=crop&auto=format",
+                  altText: "Customer Support",
+                  gradient: "from-indigo-500 to-blue-500",
+                  delay: 0.3,
+                  height: "h-80",
+                },
+                {
+                  id: 5,
+                  icon: <GraduationCap className="w-8 h-8" />,
+                  title: "Smart Education",
+                  description: "Comprehensive educational resources including webinars, tutorials, market analysis, and trading guides for all levels",
+                  badge: "Free Resources",
+                  imageSrc: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=480&fit=crop&auto=format",
+                  altText: "Trading Education",
+                  gradient: "from-red-500 to-pink-500",
+                  delay: 0.4,
+                  height: "h-76",
+                },
+                {
+                  id: 6,
+                  icon: <Lock className="w-8 h-8" />,
+                  title: "Fund Security",
+                  description: "Your funds are protected with segregated accounts, negative balance protection, and tier-1 banking partnerships",
+                  badge: "Fully Protected",
+                  imageSrc: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=400&h=520&fit=crop&auto=format",
+                  altText: "Fund Security",
+                  gradient: "from-slate-500 to-gray-500",
+                  delay: 0.5,
+                  height: "h-82",
+                },
+              ].map((service) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: service.delay }}
+                  className="mb-6"
+                >
+                  <TiltedCard
+                    imageSrc={service.imageSrc}
+                    altText={service.altText}
+                    captionText={service.title}
+                    className={service.height}
+                  >
+                    <div className="absolute inset-0 z-10 p-6 flex flex-col justify-end">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="p-2 rounded-lg bg-white/20 backdrop-blur-sm">
+                          {service.icon}
+                        </div>
+                        <h3 className="text-2xl font-bold text-white">
+                          {service.title}
+                        </h3>
+                      </div>
+                      <p className="text-white/90 mb-4 text-sm leading-relaxed line-clamp-3">
+                        {service.description}
+                      </p>
+                      <div className="px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 inline-block">
+                        <span className="text-sm font-semibold text-white">
+                          {service.badge}
+                        </span>
+                      </div>
+                    </div>
+                  </TiltedCard>
+                </motion.div>
+              ))}
+            </Masonry>
+
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+              className="mt-16"
+            >
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-3 text-lg"
+              >
+                Start Trading Now
+              </Button>
             </motion.div>
           </motion.div>
         </div>
