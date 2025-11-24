@@ -1035,120 +1035,272 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA & Payment Methods Section */}
-      <section className="bg-gradient-to-r from-slate-700 via-slate-600 to-slate-700 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 py-16">
+      {/* Need Help Getting Started Section */}
+      <section className="min-h-[60vh] bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-indigo-950 dark:to-purple-950 flex items-center justify-center py-20 relative overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-400 dark:bg-blue-600 rounded-full blur-3xl" />
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-400 dark:bg-purple-600 rounded-full blur-3xl" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto text-center"
+          >
+            {/* Icon/Visual Element */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 mb-8 shadow-2xl"
+            >
+              <HeadphonesIcon className="w-10 h-10 text-white" />
+            </motion.div>
+
+            {/* Heading */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-400 dark:via-purple-400 dark:to-indigo-400 bg-clip-text text-transparent"
+            >
+              Need Help Getting Started?
+            </motion.h2>
+
+            {/* Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg md:text-xl text-slate-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed"
+            >
+              Our expert team is available 24/7 to guide you through every step of your trading journey. From account setup to advanced strategies, we're here to help.
+            </motion.p>
+
+            {/* CTA Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              >
+                <HeadphonesIcon className="w-5 h-5 mr-2" />
+                Get in Touch
+              </Button>
+            </motion.div>
+
+            {/* Contact Methods */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="mt-12 flex flex-wrap items-center justify-center gap-6"
+            >
+              <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-white/60 dark:bg-white/10 backdrop-blur-sm border border-blue-200 dark:border-white/20">
+                <HeadphonesIcon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <div className="text-left">
+                  <div className="text-xs text-slate-600 dark:text-gray-400">Live Chat</div>
+                  <div className="text-sm font-semibold text-slate-800 dark:text-white">Available 24/7</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-white/60 dark:bg-white/10 backdrop-blur-sm border border-purple-200 dark:border-white/20">
+                <svg className="w-5 h-5 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <div className="text-left">
+                  <div className="text-xs text-slate-600 dark:text-gray-400">Email Support</div>
+                  <div className="text-sm font-semibold text-slate-800 dark:text-white">Quick Response</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-white/60 dark:bg-white/10 backdrop-blur-sm border border-indigo-200 dark:border-white/20">
+                <svg className="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <div className="text-left">
+                  <div className="text-xs text-slate-600 dark:text-gray-400">Phone Support</div>
+                  <div className="text-sm font-semibold text-slate-800 dark:text-white">Instant Help</div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Payment Methods Section */}
+      <section className="bg-gradient-to-r from-slate-700 via-slate-600 to-slate-700 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 py-16 overflow-hidden">
         <div className="container mx-auto px-4">
-          {/* CTA Banner */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col md:flex-row items-center justify-between gap-6 mb-16"
+            className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
-              Need help getting started?
-            </h2>
-            <Button
-              size="lg"
-              className="bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-gray-100 px-8 py-6 text-lg font-semibold rounded-xl shadow-lg"
-            >
-              Get in touch
-            </Button>
-          </motion.div>
-
-          {/* Payment Methods */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-center"
-          >
-            <h3 className="text-sm font-medium text-slate-300 dark:text-slate-400 mb-8 tracking-wider">
+            <h3 className="text-sm font-medium text-slate-300 dark:text-slate-400 mb-2 tracking-wider">
               FUNDING METHODS WE ACCEPT
             </h3>
-
-            {/* Payment Logos */}
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-              {/* Teller */}
-              <div className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                <svg className="h-8 w-auto" viewBox="0 0 120 30" fill="white">
-                  <text x="0" y="20" fontSize="20" fontWeight="bold">TELLER</text>
-                </svg>
-              </div>
-
-              {/* Skrill */}
-              <div className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                <svg className="h-8 w-auto" viewBox="0 0 100 30" fill="white">
-                  <text x="0" y="20" fontSize="18" fontWeight="bold">Skrill</text>
-                </svg>
-              </div>
-
-              {/* Visa */}
-              <div className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                <svg className="h-8 w-auto" viewBox="0 0 48 16" fill="white">
-                  <path d="M19.6 1.3l-3.6 13.4h-2.8L16.8 1.3h2.8zm11.6 8.7c0-3.5-4.8-3.7-4.8-5.2 0-.5.4-.9 1.4-.9 1.1-.1 2.2.2 3.1.7l.6-2.7c-1-.4-2-.6-3.1-.6-3.3 0-5.6 1.8-5.6 4.3 0 1.9 1.7 2.9 3 3.5s1.8 1.1 1.8 1.7c0 .9-1.1 1.3-2.1 1.3-1.4 0-2.7-.4-3.9-1l-.6 2.8c1.2.5 2.5.8 3.8.8 3.5.1 5.8-1.7 5.8-4.4zm8.3 4.7h2.5l-2.2-13.4h-2.3c-.5 0-1 .3-1.2.8L30 14.7h3.4l.7-1.9h4.2l.2 1.9zm-3.7-4.5l1.7-4.7 1 4.7h-2.7zM12.6 1.3L9.2 10.5l-.4-1.8c-.6-2.1-2.6-4.4-4.8-5.5l2.5 11.5h3.5l5.2-13.4h-2.6z"/>
-                </svg>
-              </div>
-
-              {/* Mastercard */}
-              <div className="h-10 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                <svg className="h-10 w-auto" viewBox="0 0 48 32" fill="none">
-                  <circle cx="16" cy="16" r="12" fill="#EB001B" opacity="0.8"/>
-                  <circle cx="32" cy="16" r="12" fill="#F79E1B" opacity="0.8"/>
-                </svg>
-              </div>
-
-              {/* PayPal */}
-              <div className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                <svg className="h-8 w-auto" viewBox="0 0 100 30" fill="white">
-                  <text x="0" y="20" fontSize="18" fontWeight="bold">PayPal</text>
-                </svg>
-              </div>
-
-              {/* Apple Pay */}
-              <div className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                <svg className="h-8 w-auto" viewBox="0 0 48 20" fill="white">
-                  <path d="M10.5 4.3c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.7-1.1 1.7-1 2.6 1 .1 2-.5 2.7-1.2zm.9 1.4c-1.5-.1-2.7.8-3.4.8s-1.8-.8-3-.8c-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.7 2.3 2.9 2.3 1.1 0 1.6-.7 3-.7s1.8.7 3 .7c1.2 0 2.1-1.1 2.9-2.2.9-1.3 1.3-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.7 0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8v.2z"/>
-                  <text x="24" y="14" fontSize="10" fontWeight="500">Pay</text>
-                </svg>
-              </div>
-
-              {/* Google Pay */}
-              <div className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                <svg className="h-8 w-auto" viewBox="0 0 48 20" fill="white">
-                  <path d="M23.7 10.7v4.5h-1.5V4.8h4c1 0 1.9.3 2.6 1 .7.6 1.1 1.5 1.1 2.4 0 1-.4 1.8-1.1 2.4-.7.7-1.6 1-2.6 1h-2.5zm0-4.4v3h2.5c.6 0 1.1-.2 1.5-.6.4-.4.6-.9.6-1.4 0-.6-.2-1.1-.6-1.5-.4-.4-.9-.6-1.5-.6h-2.5zm10.1 2c1 0 1.9.4 2.5 1 .7.6 1 1.5 1 2.5v4.4h-1.4v-1c-.6.8-1.4 1.2-2.5 1.2-.9 0-1.6-.3-2.2-.8-.6-.5-.9-1.2-.9-2 0-.9.3-1.5.9-2 .6-.5 1.4-.7 2.4-.7.9 0 1.6.2 2.2.5v-.3c0-.6-.2-1.1-.7-1.4-.4-.4-1-.6-1.6-.6-.8 0-1.5.3-2 1l-1.3-.8c.8-1 1.9-1.5 3.3-1.5h.3zm-2.2 6.3c0 .4.2.8.5 1.1.4.3.8.5 1.3.5.7 0 1.3-.3 1.8-.7.5-.5.8-1.1.8-1.7-.5-.4-1.2-.6-2.1-.6-.6 0-1.1.2-1.5.5-.4.2-.7.6-.7 1v-.1z"/>
-                  <path fill="#4285F4" d="M19.7 10c0-.5 0-1-.1-1.5H11v2.8h4.9c-.2 1.1-.8 2-1.7 2.6v2.2h2.7c1.6-1.5 2.5-3.7 2.5-6.3l.3.2z"/>
-                  <path fill="#34A853" d="M11 20c2.3 0 4.2-.8 5.6-2.1l-2.7-2.1c-.8.5-1.7.8-2.9.8-2.2 0-4.1-1.5-4.8-3.5H3.4v2.3C4.8 17.9 7.7 20 11 20z"/>
-                  <path fill="#FBBC04" d="M6.2 13.1c-.4-1.1-.4-2.3 0-3.4V7.4H3.4c-1.2 2.4-1.2 5.2 0 7.6l2.8-1.9z"/>
-                  <path fill="#EA4335" d="M11 5.2c1.2 0 2.3.4 3.2 1.2l2.4-2.4C15.2 2.7 13.2 2 11 2 7.7 2 4.8 4.1 3.4 7.4l2.8 2.2c.7-2.1 2.6-3.6 4.8-3.6v.2z"/>
-                </svg>
-              </div>
-
-              {/* Crypto */}
-              <div className="h-10 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                <div className="w-10 h-10 rounded-full bg-white/10 border-2 border-white/30 flex items-center justify-center">
-                  <Bitcoin className="w-6 h-6 text-white" />
-                </div>
-              </div>
-
-              {/* Bank */}
-              <div className="h-10 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                <div className="w-10 h-10 rounded-full bg-white/10 border-2 border-white/30 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <rect x="3" y="11" width="18" height="10" rx="2" strokeWidth="2"/>
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4" strokeWidth="2" strokeLinecap="round"/>
-                  </svg>
-                </div>
-              </div>
-
-              {/* NETELLER */}
-              <div className="h-8 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                <svg className="h-8 w-auto" viewBox="0 0 120 30" fill="white">
-                  <text x="0" y="20" fontSize="16" fontWeight="bold">NETELLER</text>
-                </svg>
-              </div>
-            </div>
           </motion.div>
+
+          {/* Infinite Scrolling Payment Logos */}
+          <div className="relative">
+            {/* Gradient Overlays */}
+            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-700 dark:from-slate-800 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-700 dark:from-slate-800 to-transparent z-10 pointer-events-none" />
+
+            {/* Scrolling Container */}
+            <motion.div
+              animate={{
+                x: [0, -1920],
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 40,
+                  ease: "linear",
+                },
+              }}
+              className="flex items-center gap-12"
+            >
+              {/* First Set */}
+              {[
+                // Teller
+                <div key="teller-1" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-8 w-auto" viewBox="0 0 120 30" fill="white">
+                    <text x="0" y="20" fontSize="20" fontWeight="bold">TELLER</text>
+                  </svg>
+                </div>,
+                // Skrill
+                <div key="skrill-1" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-8 w-auto" viewBox="0 0 100 30" fill="white">
+                    <text x="0" y="20" fontSize="18" fontWeight="bold">Skrill</text>
+                  </svg>
+                </div>,
+                // Visa
+                <div key="visa-1" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-8 w-auto" viewBox="0 0 48 16" fill="white">
+                    <path d="M19.6 1.3l-3.6 13.4h-2.8L16.8 1.3h2.8zm11.6 8.7c0-3.5-4.8-3.7-4.8-5.2 0-.5.4-.9 1.4-.9 1.1-.1 2.2.2 3.1.7l.6-2.7c-1-.4-2-.6-3.1-.6-3.3 0-5.6 1.8-5.6 4.3 0 1.9 1.7 2.9 3 3.5s1.8 1.1 1.8 1.7c0 .9-1.1 1.3-2.1 1.3-1.4 0-2.7-.4-3.9-1l-.6 2.8c1.2.5 2.5.8 3.8.8 3.5.1 5.8-1.7 5.8-4.4zm8.3 4.7h2.5l-2.2-13.4h-2.3c-.5 0-1 .3-1.2.8L30 14.7h3.4l.7-1.9h4.2l.2 1.9zm-3.7-4.5l1.7-4.7 1 4.7h-2.7zM12.6 1.3L9.2 10.5l-.4-1.8c-.6-2.1-2.6-4.4-4.8-5.5l2.5 11.5h3.5l5.2-13.4h-2.6z"/>
+                  </svg>
+                </div>,
+                // Mastercard
+                <div key="mastercard-1" className="h-10 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-10 w-auto" viewBox="0 0 48 32" fill="none">
+                    <circle cx="16" cy="16" r="12" fill="#EB001B" opacity="0.8"/>
+                    <circle cx="32" cy="16" r="12" fill="#F79E1B" opacity="0.8"/>
+                  </svg>
+                </div>,
+                // PayPal
+                <div key="paypal-1" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-8 w-auto" viewBox="0 0 100 30" fill="white">
+                    <text x="0" y="20" fontSize="18" fontWeight="bold">PayPal</text>
+                  </svg>
+                </div>,
+                // Apple Pay
+                <div key="apple-1" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-8 w-auto" viewBox="0 0 48 20" fill="white">
+                    <path d="M10.5 4.3c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.7-1.1 1.7-1 2.6 1 .1 2-.5 2.7-1.2zm.9 1.4c-1.5-.1-2.7.8-3.4.8s-1.8-.8-3-.8c-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.7 2.3 2.9 2.3 1.1 0 1.6-.7 3-.7s1.8.7 3 .7c1.2 0 2.1-1.1 2.9-2.2.9-1.3 1.3-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.7 0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8v.2z"/>
+                    <text x="24" y="14" fontSize="10" fontWeight="500">Pay</text>
+                  </svg>
+                </div>,
+                // Google Pay
+                <div key="google-1" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-8 w-auto" viewBox="0 0 48 20" fill="white">
+                    <path d="M23.7 10.7v4.5h-1.5V4.8h4c1 0 1.9.3 2.6 1 .7.6 1.1 1.5 1.1 2.4 0 1-.4 1.8-1.1 2.4-.7.7-1.6 1-2.6 1h-2.5zm0-4.4v3h2.5c.6 0 1.1-.2 1.5-.6.4-.4.6-.9.6-1.4 0-.6-.2-1.1-.6-1.5-.4-.4-.9-.6-1.5-.6h-2.5zm10.1 2c1 0 1.9.4 2.5 1 .7.6 1 1.5 1 2.5v4.4h-1.4v-1c-.6.8-1.4 1.2-2.5 1.2-.9 0-1.6-.3-2.2-.8-.6-.5-.9-1.2-.9-2 0-.9.3-1.5.9-2 .6-.5 1.4-.7 2.4-.7.9 0 1.6.2 2.2.5v-.3c0-.6-.2-1.1-.7-1.4-.4-.4-1-.6-1.6-.6-.8 0-1.5.3-2 1l-1.3-.8c.8-1 1.9-1.5 3.3-1.5h.3zm-2.2 6.3c0 .4.2.8.5 1.1.4.3.8.5 1.3.5.7 0 1.3-.3 1.8-.7.5-.5.8-1.1.8-1.7-.5-.4-1.2-.6-2.1-.6-.6 0-1.1.2-1.5.5-.4.2-.7.6-.7 1v-.1z"/>
+                    <path fill="#4285F4" d="M19.7 10c0-.5 0-1-.1-1.5H11v2.8h4.9c-.2 1.1-.8 2-1.7 2.6v2.2h2.7c1.6-1.5 2.5-3.7 2.5-6.3l.3.2z"/>
+                    <path fill="#34A853" d="M11 20c2.3 0 4.2-.8 5.6-2.1l-2.7-2.1c-.8.5-1.7.8-2.9.8-2.2 0-4.1-1.5-4.8-3.5H3.4v2.3C4.8 17.9 7.7 20 11 20z"/>
+                    <path fill="#FBBC04" d="M6.2 13.1c-.4-1.1-.4-2.3 0-3.4V7.4H3.4c-1.2 2.4-1.2 5.2 0 7.6l2.8-1.9z"/>
+                    <path fill="#EA4335" d="M11 5.2c1.2 0 2.3.4 3.2 1.2l2.4-2.4C15.2 2.7 13.2 2 11 2 7.7 2 4.8 4.1 3.4 7.4l2.8 2.2c.7-2.1 2.6-3.6 4.8-3.6v.2z"/>
+                  </svg>
+                </div>,
+                // Crypto
+                <div key="crypto-1" className="h-10 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <div className="w-10 h-10 rounded-full bg-white/10 border-2 border-white/30 flex items-center justify-center">
+                    <Bitcoin className="w-6 h-6 text-white" />
+                  </div>
+                </div>,
+                // Bank
+                <div key="bank-1" className="h-10 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <div className="w-10 h-10 rounded-full bg-white/10 border-2 border-white/30 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <rect x="3" y="11" width="18" height="10" rx="2" strokeWidth="2"/>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4" strokeWidth="2" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                </div>,
+                // NETELLER
+                <div key="neteller-1" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-8 w-auto" viewBox="0 0 120 30" fill="white">
+                    <text x="0" y="20" fontSize="16" fontWeight="bold">NETELLER</text>
+                  </svg>
+                </div>,
+                // Second Set (duplicate for seamless loop)
+                <div key="teller-2" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-8 w-auto" viewBox="0 0 120 30" fill="white">
+                    <text x="0" y="20" fontSize="20" fontWeight="bold">TELLER</text>
+                  </svg>
+                </div>,
+                <div key="skrill-2" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-8 w-auto" viewBox="0 0 100 30" fill="white">
+                    <text x="0" y="20" fontSize="18" fontWeight="bold">Skrill</text>
+                  </svg>
+                </div>,
+                <div key="visa-2" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-8 w-auto" viewBox="0 0 48 16" fill="white">
+                    <path d="M19.6 1.3l-3.6 13.4h-2.8L16.8 1.3h2.8zm11.6 8.7c0-3.5-4.8-3.7-4.8-5.2 0-.5.4-.9 1.4-.9 1.1-.1 2.2.2 3.1.7l.6-2.7c-1-.4-2-.6-3.1-.6-3.3 0-5.6 1.8-5.6 4.3 0 1.9 1.7 2.9 3 3.5s1.8 1.1 1.8 1.7c0 .9-1.1 1.3-2.1 1.3-1.4 0-2.7-.4-3.9-1l-.6 2.8c1.2.5 2.5.8 3.8.8 3.5.1 5.8-1.7 5.8-4.4zm8.3 4.7h2.5l-2.2-13.4h-2.3c-.5 0-1 .3-1.2.8L30 14.7h3.4l.7-1.9h4.2l.2 1.9zm-3.7-4.5l1.7-4.7 1 4.7h-2.7zM12.6 1.3L9.2 10.5l-.4-1.8c-.6-2.1-2.6-4.4-4.8-5.5l2.5 11.5h3.5l5.2-13.4h-2.6z"/>
+                  </svg>
+                </div>,
+                <div key="mastercard-2" className="h-10 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-10 w-auto" viewBox="0 0 48 32" fill="none">
+                    <circle cx="16" cy="16" r="12" fill="#EB001B" opacity="0.8"/>
+                    <circle cx="32" cy="16" r="12" fill="#F79E1B" opacity="0.8"/>
+                  </svg>
+                </div>,
+                <div key="paypal-2" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-8 w-auto" viewBox="0 0 100 30" fill="white">
+                    <text x="0" y="20" fontSize="18" fontWeight="bold">PayPal</text>
+                  </svg>
+                </div>,
+                <div key="apple-2" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-8 w-auto" viewBox="0 0 48 20" fill="white">
+                    <path d="M10.5 4.3c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.7-1.1 1.7-1 2.6 1 .1 2-.5 2.7-1.2zm.9 1.4c-1.5-.1-2.7.8-3.4.8s-1.8-.8-3-.8c-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.7 2.3 2.9 2.3 1.1 0 1.6-.7 3-.7s1.8.7 3 .7c1.2 0 2.1-1.1 2.9-2.2.9-1.3 1.3-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.7 0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8v.2z"/>
+                    <text x="24" y="14" fontSize="10" fontWeight="500">Pay</text>
+                  </svg>
+                </div>,
+                <div key="google-2" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-8 w-auto" viewBox="0 0 48 20" fill="white">
+                    <path d="M23.7 10.7v4.5h-1.5V4.8h4c1 0 1.9.3 2.6 1 .7.6 1.1 1.5 1.1 2.4 0 1-.4 1.8-1.1 2.4-.7.7-1.6 1-2.6 1h-2.5zm0-4.4v3h2.5c.6 0 1.1-.2 1.5-.6.4-.4.6-.9.6-1.4 0-.6-.2-1.1-.6-1.5-.4-.4-.9-.6-1.5-.6h-2.5zm10.1 2c1 0 1.9.4 2.5 1 .7.6 1 1.5 1 2.5v4.4h-1.4v-1c-.6.8-1.4 1.2-2.5 1.2-.9 0-1.6-.3-2.2-.8-.6-.5-.9-1.2-.9-2 0-.9.3-1.5.9-2 .6-.5 1.4-.7 2.4-.7.9 0 1.6.2 2.2.5v-.3c0-.6-.2-1.1-.7-1.4-.4-.4-1-.6-1.6-.6-.8 0-1.5.3-2 1l-1.3-.8c.8-1 1.9-1.5 3.3-1.5h.3zm-2.2 6.3c0 .4.2.8.5 1.1.4.3.8.5 1.3.5.7 0 1.3-.3 1.8-.7.5-.5.8-1.1.8-1.7-.5-.4-1.2-.6-2.1-.6-.6 0-1.1.2-1.5.5-.4.2-.7.6-.7 1v-.1z"/>
+                    <path fill="#4285F4" d="M19.7 10c0-.5 0-1-.1-1.5H11v2.8h4.9c-.2 1.1-.8 2-1.7 2.6v2.2h2.7c1.6-1.5 2.5-3.7 2.5-6.3l.3.2z"/>
+                    <path fill="#34A853" d="M11 20c2.3 0 4.2-.8 5.6-2.1l-2.7-2.1c-.8.5-1.7.8-2.9.8-2.2 0-4.1-1.5-4.8-3.5H3.4v2.3C4.8 17.9 7.7 20 11 20z"/>
+                    <path fill="#FBBC04" d="M6.2 13.1c-.4-1.1-.4-2.3 0-3.4V7.4H3.4c-1.2 2.4-1.2 5.2 0 7.6l2.8-1.9z"/>
+                    <path fill="#EA4335" d="M11 5.2c1.2 0 2.3.4 3.2 1.2l2.4-2.4C15.2 2.7 13.2 2 11 2 7.7 2 4.8 4.1 3.4 7.4l2.8 2.2c.7-2.1 2.6-3.6 4.8-3.6v.2z"/>
+                  </svg>
+                </div>,
+                <div key="crypto-2" className="h-10 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <div className="w-10 h-10 rounded-full bg-white/10 border-2 border-white/30 flex items-center justify-center">
+                    <Bitcoin className="w-6 h-6 text-white" />
+                  </div>
+                </div>,
+                <div key="bank-2" className="h-10 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <div className="w-10 h-10 rounded-full bg-white/10 border-2 border-white/30 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <rect x="3" y="11" width="18" height="10" rx="2" strokeWidth="2"/>
+                      <path d="M7 11V7a5 5 0 0 1 10 0v4" strokeWidth="2" strokeLinecap="round"/>
+                    </svg>
+                  </div>
+                </div>,
+                <div key="neteller-2" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <svg className="h-8 w-auto" viewBox="0 0 120 30" fill="white">
+                    <text x="0" y="20" fontSize="16" fontWeight="bold">NETELLER</text>
+                  </svg>
+                </div>,
+              ]}
+            </motion.div>
+          </div>
         </div>
       </section>
 
