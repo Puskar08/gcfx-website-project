@@ -1073,7 +1073,10 @@ export default function Home() {
               }}
               className="flex items-center gap-8"
             >
-              {/* Payment methods will be added here */}
+              {/* Bank Icon */}
+              <div className="flex items-center justify-center w-32 h-20 bg-white dark:bg-slate-800 rounded-lg shadow-md border border-slate-200 dark:border-slate-700">
+                <Landmark className="w-12 h-12 text-slate-700 dark:text-slate-300" />
+              </div>
             </motion.div>
           </div>
         </div>
