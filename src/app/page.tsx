@@ -97,7 +97,7 @@ export default function Home() {
             raysOrigin="top-center"
             raysColor="#00ffff"
             raysSpeed={1.5}
-            lightSpread={2}
+            lightSpread={1.5}
             rayLength={3}
             fadeDistance={2}
             followMouse={true}
