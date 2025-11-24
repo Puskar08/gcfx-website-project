@@ -24,7 +24,7 @@ import {
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Masonry from "@/components/mansonry";
-import TiltedCard from "@/components/titltedcard";
+import TiltedCard from "@/components/titttedcard";
 
 export default function Home() {
   const [isNavVisible, setIsNavVisible] = useState(true);
