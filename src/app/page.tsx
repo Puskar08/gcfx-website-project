@@ -80,7 +80,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       {/* Navbar */}
       <div
         className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
@@ -121,21 +121,21 @@ export default function Home() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background/10 backdrop-blur-sm border border-white/20"
             >
               <Shield className="w-4 h-4 text-black dark:text-white" />
-              <span className="text-sm font-medium">
+              <span className="text-xs sm:text-sm font-medium">
                 Regulated by Labuan FSA
               </span>
             </motion.div>
 
             <motion.h1
               variants={itemVariants}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight px-4"
             >
               Trade Forex & CFDs With Confidence
             </motion.h1>
 
             <motion.p
               variants={itemVariants}
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
+              className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto px-4"
             >
               Experience next-generation trading with advanced tools,
               competitive spreads, and a platform designed for both beginners
@@ -144,13 +144,13 @@ export default function Home() {
 
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 px-4"
             >
-              <Button size="lg">Open Live Account</Button>
+              <Button size="lg" className="w-full sm:w-auto">Open Live Account</Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="backdrop-blur-sm bg-background/50"
+                className="backdrop-blur-sm bg-background/50 w-full sm:w-auto"
               >
                 Open Demo Account
               </Button>
@@ -158,24 +158,24 @@ export default function Home() {
 
             <motion.div
               variants={itemVariants}
-              className="flex flex-wrap items-center justify-center gap-3 pt-8"
+              className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 pt-8 px-2"
             >
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/10 backdrop-blur-sm border border-white/20">
+              <div className="inline-flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-full bg-background/10 backdrop-blur-sm border border-white/20">
                 <HeadphonesIcon className="w-3.5 h-3.5 text-blue-500 dark:text-blue-400 flex-shrink-0" />
                 <span className="text-xs whitespace-nowrap">
-                  24/7 Customer Support
+                  24/7 Support
                 </span>
               </div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/10 backdrop-blur-sm border border-white/20">
+              <div className="inline-flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-full bg-background/10 backdrop-blur-sm border border-white/20">
                 <Zap className="w-3.5 h-3.5 text-yellow-500 dark:text-yellow-400 flex-shrink-0" />
                 <span className="text-xs whitespace-nowrap">
-                  Lightning Fast Execution
+                  Fast Execution
                 </span>
               </div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-background/10 backdrop-blur-sm border border-white/20">
+              <div className="inline-flex items-center gap-1.5 px-2 sm:px-3 py-1.5 rounded-full bg-background/10 backdrop-blur-sm border border-white/20">
                 <TrendingUp className="w-3.5 h-3.5 text-green-500 dark:text-green-400 flex-shrink-0" />
                 <span className="text-xs whitespace-nowrap">
-                  2000+ Trading Instruments
+                  2000+ Instruments
                 </span>
               </div>
             </motion.div>
@@ -194,7 +194,7 @@ export default function Home() {
           >
             {/* Section Header */}
             <motion.h2
-              className="text-4xl md:text-5xl font-bold mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -203,7 +203,7 @@ export default function Home() {
             </motion.h2>
 
             <motion.p
-              className="text-xl text-muted-foreground mb-16 max-w-3xl mx-auto"
+              className="text-lg sm:text-xl text-muted-foreground mb-16 max-w-3xl mx-auto px-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -212,7 +212,7 @@ export default function Home() {
             </motion.p>
 
             {/* Masonry Layout with Tilted Cards */}
-            <Masonry columns={3} gap={24} className="mx-auto">
+            <Masonry columns={{ default: 3, 1024: 2, 640: 1 }} gap={24} className="mx-auto">
               {[
                 {
                   id: 1,
@@ -353,7 +353,7 @@ export default function Home() {
               {/* Left Content */}
               <div className="text-slate-800 dark:text-white">
                 <motion.h2
-                  className="text-4xl md:text-5xl font-bold mb-6"
+                  className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
@@ -362,7 +362,7 @@ export default function Home() {
                 </motion.h2>
 
                 <motion.p
-                  className="text-xl text-slate-600 dark:text-gray-300 mb-8"
+                  className="text-lg sm:text-xl text-slate-600 dark:text-gray-300 mb-8"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -373,7 +373,7 @@ export default function Home() {
                 </motion.p>
 
                 {/* Platform Features - Smaller Cards */}
-                <div className="grid grid-cols-2 gap-4 mb-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
                   {[
                     {
                       icon: <BarChart3 className="w-6 h-6" />,
@@ -425,10 +425,10 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
                 >
-                  <h3 className="text-xl font-bold mb-6 text-slate-800 dark:text-white">
+                  <h3 className="text-lg sm:text-xl font-bold mb-6 text-slate-800 dark:text-white">
                     Download MT5 Platform
                   </h3>
-                  <div className="flex flex-wrap gap-4">
+                  <div className="flex flex-wrap gap-3 sm:gap-4 justify-center sm:justify-start">
                     {[
                       {
                         icon: (
@@ -604,7 +604,7 @@ export default function Home() {
           >
             {/* Section Header */}
             <motion.h2
-              className="text-3xl md:text-4xl font-bold mb-4 text-slate-800 dark:text-white"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-slate-800 dark:text-white"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -613,7 +613,7 @@ export default function Home() {
             </motion.h2>
 
             <motion.p
-              className="text-lg text-slate-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto"
+              className="text-base sm:text-lg text-slate-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto px-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -622,7 +622,7 @@ export default function Home() {
             </motion.p>
 
             {/* Account Cards */}
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {[
                 {
                   type: "Standard",
@@ -890,7 +890,7 @@ export default function Home() {
           >
             {/* Section Header */}
             <motion.h2
-              className="text-4xl md:text-5xl font-bold mb-6"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -899,7 +899,7 @@ export default function Home() {
             </motion.h2>
 
             <motion.p
-              className="text-xl text-muted-foreground mb-16 max-w-3xl mx-auto"
+              className="text-lg sm:text-xl text-muted-foreground mb-16 max-w-3xl mx-auto px-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -908,7 +908,7 @@ export default function Home() {
             </motion.p>
 
             {/* Masonry Layout with Tilted Cards */}
-            <Masonry columns={3} gap={24} className="mx-auto">
+            <Masonry columns={{ default: 3, 1024: 2, 640: 1 }} gap={24} className="mx-auto">
               {[
                 {
                   id: 1,
@@ -1037,15 +1037,15 @@ export default function Home() {
       </section>
 
       {/* Need Help Getting Started Section */}
-      <section className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 dark:from-blue-700 dark:via-blue-800 dark:to-blue-700 py-8">
+      <section className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 dark:from-blue-700 dark:via-blue-800 dark:to-blue-700 py-12 sm:py-16">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 max-w-6xl mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-white">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 max-w-6xl mx-auto">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center sm:text-left">
               Need help getting started?
             </h2>
             <Button
               size="lg"
-              className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto"
             >
               Get in touch
             </Button>
@@ -1054,14 +1054,14 @@ export default function Home() {
       </section>
 
       {/* Payment Methods Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-background overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Infinite Scrolling Payment Logos */}
             <div className="relative overflow-hidden">
               {/* Gradient Masks on both sides */}
-              <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-              <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+              <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
               
               {/* Scrolling Container */}
               <motion.div
@@ -1079,7 +1079,7 @@ export default function Home() {
                 style={{
                   willChange: "transform",
                 }}
-                className="flex items-center gap-8"
+                className="flex items-center gap-6 sm:gap-8"
               >
                 {/* First set of items */}
                 {[
