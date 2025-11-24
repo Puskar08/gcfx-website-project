@@ -1036,99 +1036,19 @@ export default function Home() {
       </section>
 
       {/* Need Help Getting Started Section */}
-      <section className="min-h-[60vh] bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-slate-900 dark:via-indigo-950 dark:to-purple-950 flex items-center justify-center py-20 relative overflow-hidden">
-        {/* Decorative Elements */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-blue-400 dark:bg-blue-600 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-400 dark:bg-purple-600 rounded-full blur-3xl" />
-        </div>
-
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
-          >
-            {/* Icon/Visual Element */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 mb-8 shadow-2xl"
+      <section className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 dark:from-blue-700 dark:via-blue-800 dark:to-blue-700 py-8">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-6xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
+              Need help getting started?
+            </h2>
+            <Button
+              size="lg"
+              className="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <HeadphonesIcon className="w-10 h-10 text-white" />
-            </motion.div>
-
-            {/* Heading */}
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-400 dark:via-purple-400 dark:to-indigo-400 bg-clip-text text-transparent"
-            >
-              Need Help Getting Started?
-            </motion.h2>
-
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-slate-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed"
-            >
-              Our expert team is available 24/7 to guide you through every step of your trading journey. From account setup to advanced strategies, we're here to help.
-            </motion.p>
-
-            {/* CTA Button */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-10 py-6 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-              >
-                <HeadphonesIcon className="w-5 h-5 mr-2" />
-                Get in Touch
-              </Button>
-            </motion.div>
-
-            {/* Contact Methods */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-12 flex flex-wrap items-center justify-center gap-6"
-            >
-              <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-white/60 dark:bg-white/10 backdrop-blur-sm border border-blue-200 dark:border-white/20">
-                <HeadphonesIcon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                <div className="text-left">
-                  <div className="text-xs text-slate-600 dark:text-gray-400">Live Chat</div>
-                  <div className="text-sm font-semibold text-slate-800 dark:text-white">Available 24/7</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-white/60 dark:bg-white/10 backdrop-blur-sm border border-purple-200 dark:border-white/20">
-                <svg className="w-5 h-5 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <div className="text-left">
-                  <div className="text-xs text-slate-600 dark:text-gray-400">Email Support</div>
-                  <div className="text-sm font-semibold text-slate-800 dark:text-white">Quick Response</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-white/60 dark:bg-white/10 backdrop-blur-sm border border-indigo-200 dark:border-white/20">
-                <svg className="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <div className="text-left">
-                  <div className="text-xs text-slate-600 dark:text-gray-400">Phone Support</div>
-                  <div className="text-sm font-semibold text-slate-800 dark:text-white">Instant Help</div>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
+              Get in touch
+            </Button>
+          </div>
         </div>
       </section>
 
