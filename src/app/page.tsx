@@ -19,7 +19,7 @@ import {
   Copy,
   GraduationCap,
   Lock,
-  Landmark
+  Landmark,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -1056,88 +1056,96 @@ export default function Home() {
       {/* Payment Methods Section */}
       <section className="py-16 overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex items-center justify-end mb-6">
-              <span className="hidden md:block text-xs tracking-wider text-muted-foreground">FUNDING METHODS WE ACCEPT</span>
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-8">
-              {/* Crypto */}
-              <div className="h-8 flex items-center">
-                <Bitcoin className="h-8 w-8 text-orange-500" />
-              </div>
-
-              {/* Bank Transfer - Icon only */}
-              <div className="h-8 flex items-center">
-                <Landmark className="h-8 w-8 text-slate-700 dark:text-white" />
-              </div>
-
-              {/* NETELLER */}
-              <div className="h-8 flex items-center">
-                <svg className="h-8 w-auto" viewBox="0 0 120 32" fill="none">
-                  <text x="0" y="24" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="20" fill="#86B817">
-                    NETELLER
-                  </text>
-                </svg>
-              </div>
-
-              {/* Skrill */}
-              <div className="h-8 flex items-center">
-                <svg className="h-8 w-auto" viewBox="0 0 80 32" fill="none">
-                  <text x="0" y="24" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="22" fill="#862165">
-                    Skrill
-                  </text>
-                </svg>
-              </div>
-
-              {/* VISA */}
-              <div className="h-8 flex items-center">
-                <svg className="h-8 w-auto" viewBox="0 0 48 16" fill="none">
-                  <rect width="48" height="16" fill="white" rx="2" />
-                  <text x="24" y="12" textAnchor="middle" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="10" fill="#1434CB">
-                    VISA
-                  </text>
-                </svg>
-              </div>
-
-              {/* Mastercard */}
-              <div className="h-8 flex items-center">
-                <svg className="h-8 w-8" viewBox="0 0 32 32" fill="none">
-                  <circle cx="12" cy="16" r="10" fill="#EB001B" />
-                  <circle cx="20" cy="16" r="10" fill="#F79E1B" />
-                </svg>
-              </div>
-
-              {/* PayPal */}
-              <div className="h-8 flex items-center">
-                <svg className="h-8 w-auto" viewBox="0 0 48 16" fill="none">
-                  <rect width="48" height="16" fill="white" rx="2" />
-                  <text x="24" y="12" textAnchor="middle" fontFamily="Arial, sans-serif" fontWeight="700" fontSize="9" fill="#003087">
-                    PayPal
-                  </text>
-                </svg>
-              </div>
-
-              {/* Apple Pay */}
-              <div className="h-8 flex items-center">
-                <svg className="h-8 w-auto" viewBox="0 0 48 16" fill="none">
-                  <rect width="48" height="16" fill="white" rx="2" />
-                  <path d="M14 6c.4-.5.7-1.2.6-1.8-.6 0-1.3.4-1.7.9-.4.5-.7 1.2-.7 1.8.7 0 1.4-.3 1.8-.9zm.6 1c-1 0-1.8.5-2.3.5s-1.2-.5-2-.5c-1 0-2 .6-2.5 1.5-1.1 1.8-.3 4.5.7 6 .5.7 1.1 1.5 1.9 1.5.7 0 1-.5 2-.5s1.2.5 2 .5c.8 0 1.4-.7 1.9-1.5.6-.9.9-1.7.9-1.7s-1.7-.7-1.7-2.5c0-1.5 1.3-2.3 1.3-2.3-.7-1.1-1.9-1.2-2.3-1.2z" fill="#000" />
-                  <text x="32" y="11" fontFamily="Arial, sans-serif" fontWeight="600" fontSize="7" fill="#000">Pay</text>
-                </svg>
-              </div>
-
-              {/* Google Pay */}
-              <div className="h-8 flex items-center">
-                <svg className="h-8 w-auto" viewBox="0 0 48 16" fill="none">
-                  <rect width="48" height="16" fill="white" rx="2" />
-                  <path d="M18 8c0-.3 0-.7-.1-1h-6.9v1.9h3.9c-.2.9-.7 1.6-1.4 2.1v1.7h2.2c1.3-1.2 2.1-2.9 2.3-4.7z" fill="#4285F4" />
-                  <path d="M11 15c1.9 0 3.5-.6 4.7-1.7l-2.2-1.7c-.6.4-1.5.7-2.4.7-1.9 0-3.5-1.2-4.1-2.9H4.7v1.7C5.9 13.3 8.3 15 11 15z" fill="#34A853" />
-                  <path d="M6.9 9.3c-.3-.8-.3-1.7 0-2.5V5.1H4.7c-.9 1.7-.9 3.8 0 5.5l2.2-1.3z" fill="#FBBC04" />
-                  <path d="M11 4.7c1 0 2 .4 2.7 1l2-2C14.5 2.6 13 2 11 2 8.3 2 5.9 3.6 4.7 6l2.2 1.7c.6-1.7 2.2-3 4.1-3z" fill="#EA4335" />
-                  <text x="36" y="11" fontFamily="Arial, sans-serif" fontWeight="600" fontSize="7" fill="#000">Pay</text>
-                </svg>
-              </div>
-            </div>
+          {/* Infinite Scrolling Payment Logos */}
+          <div className="relative">
+            {/* Scrolling Container */}
+            <motion.div
+              animate={{
+                x: [0, -1440],
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 30,
+                  ease: "linear",
+                },
+              }}
+              className="flex items-center gap-8"
+            >
+              {/* Repeat 6 times for seamless loop */}
+              {[...Array(6)].map((_, setIndex) => (
+                <div key={`set-${setIndex}`} className="flex items-center gap-8">
+                  {/* Bank (icon only, no text) */}
+                  <div className="h-8 w-auto flex-shrink-0 flex items-center">
+                    <Landmark className="h-8 w-auto text-blue-600 dark:text-blue-400" />
+                  </div>
+                  
+                  {/* Skrill - clean wordmark */}
+                  <div className="h-8 w-auto flex-shrink-0">
+                    <div className="h-8 px-3 rounded-lg bg-white dark:bg-white/95 flex items-center justify-center border border-gray-200">
+                      <svg className="h-6 w-auto" viewBox="0 0 90 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <title>Skrill</title>
+                        <text x="0" y="17" fontFamily="Arial, Helvetica, sans-serif" fontSize="16" fontWeight="700" fill="#862165">Skrill</text>
+                      </svg>
+                    </div>
+                  </div>
+                  
+                  {/* Visa - With proper blue and gold colors */}
+                  <div className="h-8 w-auto flex-shrink-0">
+                    <svg className="h-8 w-auto" viewBox="0 0 60 20" fill="none">
+                      {/* Visa logo with brand colors */}
+                      <path d="M24.2 3.5l-4.5 13h-3.5L19.8 3.5h3.4zm14.5 8.5c0-3.4-5.9-3.6-5.9-5.1 0-.5.5-.9 1.7-.9 1.4-.1 2.7.3 3.8.8l.7-3.3c-1.2-.5-2.5-.7-3.8-.7-4 0-6.9 2.1-6.9 5.2 0 2.3 2.1 3.5 3.7 4.3 1.6.8 2.2 1.3 2.2 2 0 1.1-1.3 1.6-2.6 1.6-1.7 0-3.3-.5-4.8-1.2l-.7 3.4c1.5.6 3.1 1 4.7 1 4.3.1 7.1-2.1 7.1-5.3zm10.2 4.5h3.1l-2.7-13h-2.8c-.6 0-1.2.4-1.5 1l-5.2 12h4.2l.8-2.3h5.2l.9 2.3zm-4.5-5.5l2.1-5.7 1.2 5.7h-3.3zM14.5 3.5L10.6 12.5l-.5-2.2c-.7-2.5-3.2-5.3-5.9-6.7l3.1 13.9h4.3l6.4-14h-3.1z" fill="#1434CB"/>
+                      <path d="M6.5 3.5H.1l-.1.5c5 1.2 8.3 4.2 9.7 7.8L8.2 4.6c-.3-1-.9-1.1-1.7-1.1z" fill="#F7B600"/>
+                    </svg>
+                  </div>
+                  
+                  {/* Mastercard */}
+                  <div className="h-8 w-auto flex-shrink-0">
+                    <svg className="h-8 w-auto" viewBox="0 0 48 32" fill="none">
+                      <circle cx="16" cy="16" r="12" fill="#EB001B"/>
+                      <circle cx="32" cy="16" r="12" fill="#F79E1B"/>
+                    </svg>
+                  </div>
+                  
+                  {/* PayPal */}
+                  <div className="h-8 w-auto flex-shrink-0">
+                    <svg className="h-8 w-auto" viewBox="0 0 100 26" fill="none">
+                      {/* PayPal with brand colors */}
+                      <path d="M12 4c3.5 0 6 1.5 6 5 0 4-3 7-7 7H9l-1 5H5L8 4h4zm-1 9c2 0 3-1.5 3-3.5 0-1.5-.5-2.5-2-2.5h-1l-1 6h1z" fill="#003087"/>
+                      <path d="M20 4c3.5 0 6 1.5 6 5 0 4-3 7-7 7h-2l-1 5h-3l3-17h4zm-1 9c2 0 3-1.5 3-3.5 0-1.5-.5-2.5-2-2.5h-1l-1 6h1z" fill="#009CDE"/>
+                      <text x="30" y="17" fontSize="11" fontWeight="600" fill="#003087">PayPal</text>
+                    </svg>
+                  </div>
+                  
+                  {/* Apple Pay */}
+                  <div className="h-8 w-auto flex-shrink-0">
+                    <svg className="h-8 w-auto" viewBox="0 0 48 20" fill="currentColor">
+                      <path d="M10.5 4.3c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.7-1.1 1.7-1 2.6 1 .1 2-.5 2.7-1.2zm.9 1.4c-1.5-.1-2.7.8-3.4.8s-1.8-.8-3-.8c-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.7 2.3 2.9 2.3 1.1 0 1.6-.7 3-.7s1.8.7 3 .7c1.2 0 2.1-1.1 2.9-2.2.9-1.3 1.3-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.7 0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8v.2z"/>
+                      <text x="24" y="14" fontSize="10" fontWeight="500">Pay</text>
+                    </svg>
+                  </div>
+                  
+                  {/* Google Pay */}
+                  <div className="h-8 w-auto flex-shrink-0">
+                    <svg className="h-8 w-auto" viewBox="0 0 60 24" fill="none">
+                      {/* Google "G" Icon */}
+                      <path d="M22 12c0-.5-.05-1-.15-1.5H12v2.8h5.6c-.25 1.3-.95 2.4-2 3.1v2.5h3.2c1.9-1.7 3-4.3 3-7.4z" fill="#4285F4"/>
+                      <path d="M12 23c2.7 0 5-0.9 6.7-2.4l-3.2-2.5c-.9.6-2.1 1-3.5 1-2.7 0-5-1.8-5.8-4.3H3v2.6C4.7 21 8.1 23 12 23z" fill="#34A853"/>
+                      <path d="M6.2 14.8c-.4-1.2-.4-2.5 0-3.7V8.5H3c-1.3 2.6-1.3 5.7 0 8.3l3.2-2z" fill="#FBBC04"/>
+                      <path d="M12 5.4c1.5 0 2.8.5 3.9 1.5l2.9-2.9C16.9 2.4 14.6 1.5 12 1.5 8.1 1.5 4.7 3.5 3 7.1l3.2 2.5c.8-2.5 3.1-4.3 5.8-4.3z" fill="#EA4335"/>
+                      {/* "Pay" Text */}
+                      <text x="26" y="15" fontSize="11" fontWeight="500" fill="currentColor">Pay</text>
+                    </svg>
+                  </div>
+                  
+                  {/* Crypto (Bitcoin icon only, no circle) */}
+                  <div className="h-8 w-auto flex-shrink-0">
+                    <Bitcoin className="h-8 w-auto text-orange-500" />
+                  </div>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </section>
