@@ -1055,23 +1055,8 @@ export default function Home() {
       {/* Payment Methods Section */}
       <section className="py-16 overflow-hidden">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h3 className="text-sm font-medium text-muted-foreground mb-2 tracking-wider">
-              FUNDING METHODS WE ACCEPT
-            </h3>
-          </motion.div>
-
           {/* Infinite Scrolling Payment Logos */}
           <div className="relative">
-            {/* Gradient Overlays */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-
             {/* Scrolling Container */}
             <motion.div
               animate={{
