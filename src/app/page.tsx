@@ -1077,18 +1077,18 @@ export default function Home() {
               {[...Array(12)].map((_, index) => (
                 <div
                   key={`set1-${index}`}
-                  className="w-32 h-20 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 flex-shrink-0 overflow-hidden"
+                  className="w-32 h-20 flex-shrink-0 overflow-hidden"
                 >
-                  <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" />
+                  <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" strokeWidth={0} fill="currentColor" />
                 </div>
               ))}
               {/* Second set of items for seamless loop */}
               {[...Array(12)].map((_, index) => (
                 <div
                   key={`set2-${index}`}
-                  className="w-32 h-20 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 flex-shrink-0 overflow-hidden"
+                  className="w-32 h-20 flex-shrink-0 overflow-hidden"
                 >
-                  <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" />
+                  <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" strokeWidth={0} fill="currentColor" />
                 </div>
               ))}
             </motion.div>
