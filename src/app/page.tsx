@@ -1081,13 +1081,15 @@ export default function Home() {
                     <Landmark className="h-8 w-auto text-blue-600 dark:text-blue-400" />
                   </div>
                   
-                  {/* Skrill - clean wordmark */}
-                  <div className="h-8 w-auto flex-shrink-0">
-                    <svg className="h-8 w-auto" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <title>Skrill</title>
-                      {/* Skrill wordmark in brand purple */}
-                      <path d="M15.5 19.2c-1.8 0-3.2-.5-4.3-1.4l1.4-3.2c.9.7 2 1.1 3.1 1.1.9 0 1.4-.3 1.4-.8 0-.5-.5-.8-1.6-1.1-2.8-.7-4.6-1.7-4.6-4.3 0-2.5 2.1-4.4 5.5-4.4 1.7 0 3.1.4 4.2 1.2l-1.3 3.1c-.9-.6-1.9-.9-2.8-.9-.8 0-1.2.3-1.2.7 0 .5.6.7 1.8 1.1 2.9.7 4.5 1.9 4.5 4.3 0 2.7-2.2 4.6-5.6 4.6zm13.3-.2l-4-5.5v5.5h-3.9V4.5h3.9v8.9l3.8-4.9h4.6l-4.7 5.8 5 4.5h-4.7zm9.8 0h-3.9V8.5h3.9v1.4c.7-1 1.9-1.6 3.3-1.6.5 0 .9.1 1.2.2v3.7c-.4-.2-1-.3-1.6-.3-1.4 0-2.9.8-2.9 2.8v4.3zm9.9-11.2V4.5h3.9v3.3h-3.9zm0 11.2V8.5h3.9v10.5h-3.9zm7.5 0V4.5h3.9v14.5h-3.9zm9 0V4.5h3.9v14.5h-3.9z" fill="#862165"/>
-                    </svg>
+                  {/* Skrill - original brand logo (no border, no extra padding) */}
+                  <div className="h-8 w-auto flex-shrink-0 flex items-center">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Skrill_logo.svg"
+                      alt="Skrill"
+                      className="h-6 w-auto block"
+                      loading="lazy"
+                      decoding="async"
+                    />
                   </div>
                   
                   {/* Visa - With proper blue and gold colors */}
