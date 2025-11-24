@@ -101,7 +101,7 @@ export default function Home() {
             rayLength={1.5}
             followMouse={true}
             mouseInfluence={0.2}
-            noiseAmount={0.1}
+            noiseAmount={0.5}
             distortion={0.05}
             className="w-full h-full"
           />
