@@ -1,9 +1,8 @@
 "use client";
-
-import React, { ReactNode } from "react";
+import React from "react";
 
 interface MasonryProps {
-  children: ReactNode;
+  children: React.ReactNode;
   columns?: number;
   gap?: number;
   className?: string;
@@ -12,35 +11,27 @@ interface MasonryProps {
 export default function Masonry({
   children,
   columns = 3,
-  gap = 16,
+  gap = 24,
   className = "",
 }: MasonryProps) {
-  const childrenArray = React.Children.toArray(children);
-
-  // Create column arrays
-  const columnArrays: ReactNode[][] = Array.from(
-    { length: columns },
-    () => []
-  );
-
-  // Distribute children across columns
-  childrenArray.forEach((child, index) => {
-    const columnIndex = index % columns;
-    columnArrays[columnIndex].push(child);
-  });
+  // Convert gap to Tailwind class
+  const gapClass = `gap-${gap / 4}`;
 
   return (
     <div
-      className={`flex gap-${gap / 4} ${className}`}
-      style={{ gap: `${gap}px` }}
+      className={`
+        grid 
+        grid-cols-1 
+        md:grid-cols-2 
+        ${columns >= 3 ? "lg:grid-cols-3" : ""}
+        ${columns >= 4 ? "xl:grid-cols-4" : ""}
+        ${gapClass}
+        ${className}
+      `}
     >
-      {columnArrays.map((columnChildren, columnIndex) => (
-        <div
-          key={columnIndex}
-          className="flex flex-col flex-1"
-          style={{ gap: `${gap}px` }}
-        >
-          {columnChildren}
+      {React.Children.map(children, (child, index) => (
+        <div key={index} className="break-inside-avoid">
+          {child}
         </div>
       ))}
     </div>
