@@ -1038,7 +1038,7 @@ export default function Home() {
       {/* Need Help Getting Started Section */}
       <section className="bg-gradient-to-r from-blue-600 via-blue-700 to-blue-600 dark:from-blue-700 dark:via-blue-800 dark:to-blue-700 py-8">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 max-w-6xl mx-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-6xl mx-auto">
             <h2 className="text-2xl md:text-3xl font-bold text-white">
               Need help getting started?
             </h2>
