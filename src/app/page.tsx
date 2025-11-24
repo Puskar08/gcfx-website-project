@@ -1077,7 +1077,7 @@ export default function Home() {
               {[...Array(12)].map((_, index) => (
                 <div
                   key={`set1-${index}`}
-                  className="w-10 h-6 flex-shrink-0 overflow-hidden"
+                  className={index === 3 ? "w-20 h-14 flex-shrink-0 overflow-hidden" : "w-14 h-10 flex-shrink-0 overflow-hidden"}
                 >
                   <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" strokeWidth={2} fill="none" stroke="currentColor" />
                 </div>
@@ -1086,7 +1086,7 @@ export default function Home() {
               {[...Array(12)].map((_, index) => (
                 <div
                   key={`set2-${index}`}
-                  className="w-10 h-6 flex-shrink-0 overflow-hidden"
+                  className={index === 3 ? "w-20 h-14 flex-shrink-0 overflow-hidden" : "w-14 h-10 flex-shrink-0 overflow-hidden"}
                 >
                   <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" strokeWidth={2} fill="none" stroke="currentColor" />
                 </div>
