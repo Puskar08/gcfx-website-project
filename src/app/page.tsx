@@ -1061,7 +1061,7 @@ export default function Home() {
             {/* Scrolling Container */}
             <motion.div
               animate={{
-                x: [0, -1440],
+                x: [0, -1920],
               }}
               transition={{
                 x: {
@@ -1073,13 +1073,22 @@ export default function Home() {
               }}
               className="flex items-center gap-8"
             >
-              {/* Duplicate items for seamless loop */}
+              {/* First set of items */}
               {[...Array(12)].map((_, index) => (
                 <div
-                  key={index}
-                  className="flex items-center justify-center w-32 h-20 bg-white dark:bg-slate-800 rounded-lg shadow-md border border-slate-200 dark:border-slate-700 flex-shrink-0"
+                  key={`set1-${index}`}
+                  className="w-32 h-20 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 flex-shrink-0 overflow-hidden"
                 >
-                  <Landmark className="w-12 h-12 text-slate-700 dark:text-slate-300" />
+                  <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" />
+                </div>
+              ))}
+              {/* Second set of items for seamless loop */}
+              {[...Array(12)].map((_, index) => (
+                <div
+                  key={`set2-${index}`}
+                  className="w-32 h-20 bg-white dark:bg-slate-800 rounded-lg border border-slate-200 dark:border-slate-700 flex-shrink-0 overflow-hidden"
+                >
+                  <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" />
                 </div>
               ))}
             </motion.div>
