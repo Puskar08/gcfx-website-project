@@ -19,6 +19,7 @@ import {
   Copy,
   GraduationCap,
   Lock,
+  Landmark,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
@@ -1075,6 +1076,13 @@ export default function Home() {
               {/* Repeat 6 times for seamless loop */}
               {[...Array(6)].map((_, setIndex) => (
                 <div key={`set-${setIndex}`} className="flex items-center gap-8">
+                  {/* Bank Transfer */}
+                  <div className="h-8 w-auto flex-shrink-0">
+                    <div className="h-8 w-8 rounded-lg bg-slate-500/20 border-2 border-slate-500/50 flex items-center justify-center">
+                      <Landmark className="w-5 h-5 text-slate-600 dark:text-slate-400" />
+                    </div>
+                  </div>
+                  
                   {/* Skrill - With proper logo */}
                   <div className="h-8 w-auto flex-shrink-0">
                     <svg className="h-8 w-auto" viewBox="0 0 120 40" fill="none">
@@ -1094,8 +1102,8 @@ export default function Home() {
                   </div>
                   
                   {/* Mastercard */}
-                  <div className="h-10 w-auto flex-shrink-0">
-                    <svg className="h-10 w-auto" viewBox="0 0 48 32" fill="none">
+                  <div className="h-8 w-auto flex-shrink-0">
+                    <svg className="h-8 w-auto" viewBox="0 0 48 32" fill="none">
                       <circle cx="16" cy="16" r="12" fill="#EB001B"/>
                       <circle cx="32" cy="16" r="12" fill="#F79E1B"/>
                     </svg>
@@ -1133,9 +1141,9 @@ export default function Home() {
                   </div>
                   
                   {/* Crypto */}
-                  <div className="h-10 w-auto flex-shrink-0">
-                    <div className="w-10 h-10 rounded-full bg-orange-500/20 border-2 border-orange-500/50 flex items-center justify-center">
-                      <Bitcoin className="w-6 h-6 text-orange-500" />
+                  <div className="h-8 w-auto flex-shrink-0">
+                    <div className="h-8 w-8 rounded-full bg-orange-500/20 border-2 border-orange-500/50 flex items-center justify-center">
+                      <Bitcoin className="w-5 h-5 text-orange-500" />
                     </div>
                   </div>
                 </div>
