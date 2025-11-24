@@ -154,17 +154,17 @@ export const Navbar = () => {
         className="relative"
         onMouseLeave={() => setActiveDropdown(null)}
       >
-        <div className="w-full px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
+        <div className="w-full px-4 lg:px-8">
+          <div className="flex h-16 items-center justify-between gap-2">
             {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2 flex-shrink-0">
               <svg
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 width="120"
                 height="32"
                 viewBox="0 0 1166 317"
-                className="h-8 w-auto text-black dark:text-white"
+                className="h-7 lg:h-8 w-auto text-black dark:text-white"
               >
                 <path d="M0 0 C114.51 0 229.02 0 347 0 C347 45.21 347 90.42 347 137 C306.13720142 137.1209091 306.13720142 137.1209091 288.91992188 137.14648438 C277.06530837 137.1642359 265.21075918 137.18502304 253.35620117 137.22631836 C244.71985089 137.2563885 236.08355314 137.27561445 227.44715196 137.28226548 C222.88183317 137.28614816 218.31666454 137.29515692 213.75139427 137.31719017 C177.33470891 137.48604546 177.33470891 137.48604546 162 134 C160.54783533 133.68591617 159.09557856 133.37225786 157.64323425 133.05900574 C130.03938036 126.87984582 103.80203794 111.81596707 88.3581543 87.54296875 C78 70.57244526 78 70.57244526 78 62 C85.42323978 61.74420259 92.84551847 61.54923182 100.27228546 61.43006611 C103.72185256 61.37284252 107.16838886 61.29537542 110.61621094 61.17016602 C114.58751012 61.0268627 118.5576187 60.97424896 122.53125 60.92578125 C123.75863892 60.86900711 124.98602783 60.81223297 126.25061035 60.7537384 C134.70658876 60.747685 134.70658876 60.747685 138.44824219 64.37045288 C140.54882812 67.29760742 140.54882812 67.29760742 142.26574707 70.21037292 C149.62516172 82.04833613 165.00531612 86.74849189 177.7109375 90.140625 C191.64939797 93.14126957 205.4883519 93.335212 219.68359375 93.4140625 C221.83692637 93.43281222 223.99025194 93.45238834 226.14356995 93.4727478 C231.76083177 93.52367359 237.37811731 93.56350882 242.9954834 93.60089111 C249.76230921 93.64828793 256.52902102 93.70971331 263.29575348 93.76873779 C273.53045528 93.85646666 283.76514062 93.92657643 294 94 C294 77.17 294 60.34 294 43 C285.91814209 43.05236816 277.83628418 43.10473633 269.50952148 43.15869141 C243.65066823 43.31919079 217.7918284 43.43042403 191.93260887 43.51065329 C187.91592744 43.52316036 183.89924753 43.53610359 179.88256836 43.54931641 C179.08291977 43.55193951 178.28327119 43.55456261 177.45939083 43.55726521 C164.5114315 43.60077881 151.56391616 43.67962407 138.61622023 43.77152796 C125.33065834 43.86504355 112.04532896 43.92058761 98.75945145 43.94088495 C90.56103296 43.95460679 82.36386931 43.9979411 74.16583712 44.07916467 C68.54408722 44.13202593 62.92298597 44.14800148 57.30100559 44.13501377 C54.05670582 44.12860714 50.81506047 44.14388393 47.57104874 44.19205475 C44.0509787 44.24176683 40.53629063 44.22987899 37.01609802 44.20254517 C35.99371377 44.23167358 34.97132952 44.26080199 33.91796392 44.29081309 C29.5111296 44.19820794 27.01726496 44.03120291 23.84015572 40.81056285 C22.04321671 38.27436399 20.48920271 35.72600888 19 33 C18.30430908 31.89946289 17.60861816 30.79892578 16.8918457 29.66503906 C16.32554443 28.70823242 15.75924316 27.75142578 15.17578125 26.765625 C14.53962891 25.69699219 13.90347656 24.62835938 13.24804688 23.52734375 C12.28995117 21.90505859 12.28995117 21.90505859 11.3125 20.25 C10.01828882 18.06690048 8.72275724 15.88458309 7.42578125 13.703125 C6.83104004 12.70216797 6.23629883 11.70121094 5.62353516 10.66992188 C4.3159902 8.51964945 2.97062151 6.43025593 1.54296875 4.359375 C0 2 0 2 0 0 Z " fill="currentColor" transform="translate(11,140)" />
                 <path d="M0 0 C2.40654323 0.02909465 4.81088244 0.02051126 7.2175293 0.00756836 C39.99179298 0.051761 71.01387582 11.6791792 95.04370117 34.13842773 C108.29007756 47.56502693 125.34057617 70.69163694 125.34057617 90.46655273 C107.52057617 90.46655273 89.70057617 90.46655273 71.34057617 90.46655273 C69.69057617 86.50655273 68.04057617 82.54655273 66.34057617 78.46655273 C57.00019428 61.25846255 44.01479824 50.79669621 25.27807617 45.15405273 C9.90178 41.23773595 -8.95547071 41.23145505 -23.65942383 47.46655273 C-24.68680664 47.8906543 -25.71418945 48.31475586 -26.77270508 48.75170898 C-45.3878428 57.2432394 -56.65141179 72.76889613 -63.65942383 91.46655273 C-72.0551696 115.55601408 -69.35600057 143.63145876 -58.65942383 166.46655273 C-54.80153757 174.17160891 -49.66955912 180.32808715 -43.65942383 186.46655273 C-42.88211914 187.29799805 -42.88211914 187.29799805 -42.08911133 188.14624023 C-38.21952587 191.89426804 -33.59566787 194.2664761 -28.84692383 196.71655273 C-28.19522217 197.05831543 -27.54352051 197.40007812 -26.87207031 197.75219727 C-10.85348668 205.67171872 12.03918361 204.88133086 28.83666992 199.78686523 C47.97239587 192.57630183 59.86005498 181.05949352 68.34057617 162.46655273 C69.66057617 159.49655273 70.98057617 156.52655273 72.34057617 153.46655273 C90.16057617 153.46655273 107.98057617 153.46655273 126.34057617 153.46655273 C123.59951963 172.65394851 114.5416173 189.59935817 102.34057617 204.46655273 C101.76823242 205.19100586 101.19588867 205.91545898 100.60620117 206.66186523 C80.37843244 231.22415584 46.47551906 243.1946414 15.71166992 246.29443359 C-21.79600965 249.01713892 -55.4569671 239.12261609 -84.06005859 214.61474609 C-100.94359294 199.7674169 -113.507555 179.4570801 -118.65942383 157.46655273 C-118.92368164 156.35795898 -119.18793945 155.24936523 -119.46020508 154.10717773 C-127.29964132 119.47990484 -122.43608831 84.66647684 -103.65942383 54.46655273 C-84.3337167 25.80044948 -54.99174114 8.26314847 -21.5559082 1.29345703 C-14.39685658 -0.03646597 -7.26067607 -0.09529222 0 0 Z " fill="currentColor" transform="translate(501.659423828125,35.533447265625)" />
@@ -175,7 +175,7 @@ export const Navbar = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex md:items-center md:space-x-2">
+            <div className="hidden lg:flex lg:items-center lg:space-x-2">
               {navItems.map((item) => (
                 <div
                   key={item.href}
@@ -184,44 +184,45 @@ export const Navbar = () => {
                 >
                   <Link
                     href={item.href}
-                    className="relative px-4 py-2 text-[17px] font-normal tracking-wide text-black dark:text-white transition-colors hover:text-foreground rounded-md flex  gap-1"
+                    className="relative px-3 xl:px-4 py-2 text-[15px] xl:text-[17px] font-normal tracking-wide text-black dark:text-white transition-colors hover:text-foreground rounded-md flex gap-1"
                   >
                     {item.label}
                     {/* Animated underline */}
-                    <span className="absolute bottom-1 left-1/2 h-[2px] w-0 bg-current transition-all duration-300 ease-out group-hover:left-4 group-hover:w-[calc(100%-2rem)]" />
+                    <span className="absolute bottom-1 left-1/2 h-[2px] w-0 bg-current transition-all duration-300 ease-out group-hover:left-3 xl:group-hover:left-4 group-hover:w-[calc(100%-1.5rem)] xl:group-hover:w-[calc(100%-2rem)]" />
                   </Link>
                 </div>
               ))}
             </div>
 
             {/* Right Side Actions */}
-            <div className="hidden md:flex md:items-center md:space-x-2">
+            <div className="hidden lg:flex lg:items-center lg:space-x-1 xl:space-x-2">
               {/* Language Selector */}
-              <Button variant="ghost" size="icon" aria-label="Choose language">
-                <Languages className="h-5 w-5" />
+              <Button variant="ghost" size="icon" className="h-9 w-9" aria-label="Choose language">
+                <Languages className="h-4 w-4 xl:h-5 xl:w-5" />
               </Button>
 
               {/* Theme Toggle */}
               <Button
                 variant="ghost"
                 size="icon"
+                className="h-9 w-9"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 aria-label="Toggle theme"
               >
-                <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                <Sun className="h-4 w-4 xl:h-5 xl:w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                <Moon className="absolute h-4 w-4 xl:h-5 xl:w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               </Button>
 
-              <Button variant="ghost" size="sm">
+              <Button variant="ghost" size="sm" className="text-sm xl:text-base">
                 Log In
               </Button>
-              <Button size="sm">Sign Up</Button>
+              <Button size="sm" className="text-sm xl:text-base">Sign Up</Button>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+              className="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
@@ -235,7 +236,7 @@ export const Navbar = () => {
 
         {/* Desktop Dropdown Menu - Completely Redesigned */}
         {activeDropdown && (
-          <div className="hidden md:block absolute left-0 right-0 top-full bg-gradient-to-b from-background/98 to-background/95 backdrop-blur-xl border-b border-border/40 shadow-2xl">
+          <div className="hidden lg:block absolute left-0 right-0 top-full bg-gradient-to-b from-background/98 to-background/95 backdrop-blur-xl border-b border-border/40 shadow-2xl">
             <div className="w-full flex justify-center px-6 lg:px-8 py-12">
               <div className="w-full max-w-4xl">
                 {/* Main Items - Stacked Vertically in Center */}
@@ -285,29 +286,30 @@ export const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 space-y-3 border-t border-border/40">
+          <div className="lg:hidden py-4 space-y-3 border-t border-border/40">
             {/* Language and Theme Toggle - First */}
-            <div className="flex items-center justify-between px-4 pb-3 border-b border-border/40">
-              <Button variant="ghost" size="icon" aria-label="Choose language">
-                <Languages className="h-5 w-5" />
+            <div className="flex items-center justify-between px-3 sm:px-4 pb-2 sm:pb-3 border-b border-border/40">
+              <Button variant="ghost" size="icon" className="h-8 w-8 sm:h-10 sm:w-10" aria-label="Choose language">
+                <Languages className="h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
+                className="h-8 w-8 sm:h-10 sm:w-10"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 aria-label="Toggle theme"
               >
-                <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                <Sun className="h-4 w-4 sm:h-5 sm:w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                <Moon className="absolute h-4 w-4 sm:h-5 sm:w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               </Button>
             </div>
 
             {/* Login and Sign Up - Second */}
-            <div className="space-y-2 px-4 pb-3 border-b border-border/40">
-              <Button variant="ghost" size="sm" className="w-full">
+            <div className="space-y-2 px-3 sm:px-4 pb-2 sm:pb-3 border-b border-border/40">
+              <Button variant="ghost" size="sm" className="w-full text-sm">
                 Log In
               </Button>
-              <Button size="sm" className="w-full">
+              <Button size="sm" className="w-full text-sm">
                 Sign Up
               </Button>
             </div>
@@ -322,7 +324,7 @@ export const Navbar = () => {
                   <div className="flex items-center justify-between">
                     <Link
                       href={item.href}
-                      className="flex-1 px-4 py-2 text-base font-medium text-black dark:text-white hover:text-foreground hover:bg-accent rounded-md transition-colors"
+                      className="flex-1 px-3 sm:px-4 py-2 text-sm sm:text-base font-medium text-black dark:text-white hover:text-foreground hover:bg-accent rounded-md transition-colors"
                       onClick={() => !hasDropdownItems && setIsMobileMenuOpen(false)}
                     >
                       {item.label}
@@ -343,24 +345,24 @@ export const Navbar = () => {
 
                   {/* Mobile Dropdown Items - Only show when expanded */}
                   {hasDropdownItems && isExpanded && (
-                    <div className="mt-2 pl-4 space-y-2 border-l-2 border-border/40 ml-4">
+                    <div className="mt-2 pl-3 sm:pl-4 space-y-2 border-l-2 border-border/40 ml-3 sm:ml-4">
                       {mainDropdownItems[item.label as keyof typeof mainDropdownItems]?.map((dropItem) => {
                         const Icon = dropItem.icon;
                         return (
                           <Link
                             key={dropItem.href}
                             href={dropItem.href}
-                            className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/50 transition-colors"
+                            className="flex items-start gap-2 sm:gap-3 p-2 sm:p-3 rounded-lg hover:bg-accent/50 transition-colors"
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
-                            <div className="mt-0.5 p-1.5 rounded-md bg-primary/10 text-primary">
-                              <Icon className="h-4 w-4" />
+                            <div className="mt-0.5 p-1 sm:p-1.5 rounded-md bg-primary/10 text-primary flex-shrink-0">
+                              <Icon className="h-3 w-3 sm:h-4 sm:w-4" />
                             </div>
-                            <div className="flex-1">
-                              <h4 className="text-sm font-medium text-foreground mb-0.5">
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-xs sm:text-sm font-medium text-foreground mb-0.5 break-words">
                                 {dropItem.label}
                               </h4>
-                              <p className="text-xs text-muted-foreground">
+                              <p className="text-[10px] sm:text-xs text-muted-foreground break-words">
                                 {dropItem.description}
                               </p>
                             </div>
@@ -375,20 +377,6 @@ export const Navbar = () => {
           </div>
         )}
       </div>
-
-      {/* CSS for animations */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </nav>
   );
 };
