@@ -1054,48 +1054,50 @@ export default function Home() {
       </section>
 
       {/* Payment Methods Section */}
-      <section className="py-16 overflow-hidden">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
-          {/* Infinite Scrolling Payment Logos */}
-          <div className="relative">
-            {/* Gradient Masks on both sides */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-            
-            {/* Scrolling Container */}
-            <motion.div
-              animate={{
-                x: [0, -1024],
-              }}
-              transition={{
-                x: {
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  duration: 20,
-                  ease: "linear",
-                },
-              }}
-              className="flex items-center gap-8"
-            >
-              {/* First set of items */}
-              {[...Array(12)].map((_, index) => (
-                <div
-                  key={`set1-${index}`}
-                  className="w-14 h-10 flex-shrink-0 overflow-hidden"
-                >
-                  <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" strokeWidth={2} fill="none" stroke="currentColor" />
-                </div>
-              ))}
-              {/* Second set of items for seamless loop */}
-              {[...Array(12)].map((_, index) => (
-                <div
-                  key={`set2-${index}`}
-                  className="w-14 h-10 flex-shrink-0 overflow-hidden"
-                >
-                  <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" strokeWidth={2} fill="none" stroke="currentColor" />
-                </div>
-              ))}
-            </motion.div>
+          <div className="max-w-4xl mx-auto">
+            {/* Infinite Scrolling Payment Logos */}
+            <div className="relative overflow-hidden">
+              {/* Gradient Masks on both sides */}
+              <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+              <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+              
+              {/* Scrolling Container */}
+              <motion.div
+                animate={{
+                  x: [0, -1024],
+                }}
+                transition={{
+                  x: {
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 20,
+                    ease: "linear",
+                  },
+                }}
+                className="flex items-center gap-8"
+              >
+                {/* First set of items */}
+                {[...Array(12)].map((_, index) => (
+                  <div
+                    key={`set1-${index}`}
+                    className="w-14 h-10 flex-shrink-0 overflow-hidden"
+                  >
+                    <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" strokeWidth={2} fill="none" stroke="currentColor" />
+                  </div>
+                ))}
+                {/* Second set of items for seamless loop */}
+                {[...Array(12)].map((_, index) => (
+                  <div
+                    key={`set2-${index}`}
+                    className="w-14 h-10 flex-shrink-0 overflow-hidden"
+                  >
+                    <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" strokeWidth={2} fill="none" stroke="currentColor" />
+                  </div>
+                ))}
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
