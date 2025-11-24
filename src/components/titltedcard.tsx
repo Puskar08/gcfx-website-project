@@ -60,12 +60,7 @@ export default function TiltedCard({
         transformStyle: "preserve-3d",
       }}
     >
-      <div
-        className="relative overflow-hidden rounded-2xl shadow-2xl transition-all duration-300 group-hover:shadow-2xl"
-        style={{
-          transform: "translateZ(50px)",
-        }}
-      >
+      <div className="relative overflow-hidden rounded-2xl shadow-2xl transition-all duration-300 group-hover:shadow-2xl">
         {/* Background Image */}
         <div
           className="w-full h-80 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"

@@ -136,7 +136,7 @@ export const Navbar = () => {
     { label: "About Us", href: "/about" },
   ];
 
-  const hasDropdown = (label: string) => label !== "Home" && mainDropdownItems[label as keyof typeof mainDropdownItems];
+  const hasDropdown = (label: string) => mainDropdownItems[label as keyof typeof mainDropdownItems];
 
   const toggleMobileItem = (label: string) => {
     const newExpanded = new Set(mobileExpandedItems);
