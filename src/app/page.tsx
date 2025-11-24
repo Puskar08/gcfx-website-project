@@ -1061,13 +1061,13 @@ export default function Home() {
             {/* Scrolling Container */}
             <motion.div
               animate={{
-                x: [0, -1920],
+                x: [0, -1024],
               }}
               transition={{
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
-                  duration: 30,
+                  duration: 20,
                   ease: "linear",
                 },
               }}
