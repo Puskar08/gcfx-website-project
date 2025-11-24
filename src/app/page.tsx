@@ -130,14 +130,7 @@ export default function Home() {
               variants={itemVariants}
               className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
             >
-              Trade <span className="relative inline-block">
-                <span className="relative z-10 bg-gradient-to-r from-blue-600 via-red-600 to-red-500 bg-clip-text text-transparent">
-                  Forex
-                </span>
-                <span className="absolute -top-1 -right-2 text-2xl md:text-3xl">🇪🇺</span>
-                <span className="absolute -bottom-1 left-0 text-2xl md:text-3xl">🇺🇸</span>
-                <span className="absolute -bottom-1 -right-1 text-2xl md:text-3xl">🇯🇵</span>
-              </span> & CFDs With Confidence
+              Trade Forex & CFDs With Confidence
             </motion.h1>
 
             <motion.p
