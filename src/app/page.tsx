@@ -1073,68 +1073,7 @@ export default function Home() {
               }}
               className="flex items-center gap-8"
             >
-              {/* Repeat 6 times for seamless loop */}
-              {[...Array(6)].map((_, setIndex) => (
-                <div key={`set-${setIndex}`} className="flex items-center gap-8">
-                  {/* Bank (icon only, no text) */}
-                  <div className="h-8 w-auto flex-shrink-0 flex items-center">
-                    <Landmark className="h-8 w-auto text-blue-600 dark:text-blue-400" />
-                  </div>
-                  
-                  {/* Visa - With proper blue and gold colors */}
-                  <div className="h-8 w-auto flex-shrink-0">
-                    <svg className="h-8 w-auto" viewBox="0 0 60 20" fill="none">
-                      {/* Visa logo with brand colors */}
-                      <path d="M24.2 3.5l-4.5 13h-3.5L19.8 3.5h3.4zm14.5 8.5c0-3.4-5.9-3.6-5.9-5.1 0-.5.5-.9 1.7-.9 1.4-.1 2.7.3 3.8.8l.7-3.3c-1.2-.8-2.5-1.2-3.7-1.2-1.1 0-1.6.4-1.6.9 0 .7.8.9 2.4 1.5 3.9.9 6 2.5 6 5.7 0 3.6-2.9 6.1-7.5 6.1z"/>
-                      <path d="M6.5 3.5H.1l-.1.5c5 1.2 8.3 4.2 9.7 7.8L8.2 4.6c-.3-1-.9-1.1-1.7-1.1z" fill="#F7B600"/>
-                    </svg>
-                  </div>
-                  
-                  {/* Mastercard */}
-                  <div className="h-8 w-auto flex-shrink-0">
-                    <svg className="h-8 w-auto" viewBox="0 0 48 32" fill="none">
-                      <circle cx="16" cy="16" r="12" fill="#EB001B"/>
-                      <circle cx="32" cy="16" r="12" fill="#F79E1B"/>
-                    </svg>
-                  </div>
-                  
-                  {/* PayPal */}
-                  <div className="h-8 w-auto flex-shrink-0">
-                    <svg className="h-8 w-auto" viewBox="0 0 100 26" fill="none">
-                      {/* PayPal with brand colors */}
-                      <path d="M12 4c3.5 0 6 1.5 6 5 0 4-3 7-7 7H9l-1 5H5L8 4h4zm-1 9c2 0 3-1.5 3-3.5 0-1.5-.5-2.5-2-2.5h-1l-1 6h1z" fill="#003087"/>
-                      <path d="M20 4c3.5 0 6 1.5 6 5 0 4-3 7-7 7h-2l-1 5h-3l3-17h4zm-1 9c2 0 3-1.5 3-3.5 0-1.5-.5-2.5-2-2.5h-1l-1 6h1z" fill="#009CDE"/>
-                      <text x="30" y="17" fontSize="11" fontWeight="600" fill="#003087">PayPal</text>
-                    </svg>
-                  </div>
-                  
-                  {/* Apple Pay */}
-                  <div className="h-8 w-auto flex-shrink-0">
-                    <svg className="h-8 w-auto" viewBox="0 0 48 20" fill="currentColor">
-                      <path d="M10.5 4.3c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.7-1.1 1.7-1 2.6 1 .1 2-.5 2.7-1.2zm.9 1.4c-1.5-.1-2.7.8-3.4.8s-1.8-.8-3-.8c-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.7 2.3 2.9 2.3 1.1 0 1.6-.7 3-.7s1.8.7 3 .7c1.2 0 2.1-1.1 2.9-2.2.9-1.3 1.3-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.7 0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8v.2z"/>
-                      <text x="24" y="14" fontSize="10" fontWeight="500">Pay</text>
-                    </svg>
-                  </div>
-                  
-                  {/* Google Pay */}
-                  <div className="h-8 w-auto flex-shrink-0">
-                    <svg className="h-8 w-auto" viewBox="0 0 60 24" fill="none">
-                      {/* Google "G" Icon */}
-                      <path d="M22 12c0-.5-.05-1-.15-1.5H12v2.8h5.6c-.25 1.3-.95 2.4-2 3.1v2.5h3.2c1.9-1.7 3-4.3 3-7.4z" fill="#4285F4"/>
-                      <path d="M12 23c2.7 0 5-0.9 6.7-2.4l-3.2-2.5c-.9.6-2.1 1-3.5 1-2.7 0-5-1.8-5.8-4.3H3v2.6C4.7 21 8.1 23 12 23z" fill="#34A853"/>
-                      <path d="M6.2 14.8c-.4-1.2-.4-2.5 0-3.7V8.5H3c-1.3 2.6-1.3 5.7 0 8.3l3.2-2z" fill="#FBBC04"/>
-                      <path d="M12 5.4c1.5 0 2.8.5 3.9 1.5l2.9-2.9C16.9 2.4 14.6 1.5 12 1.5 8.1 1.5 4.7 3.5 3 7.1l3.2 2.5c.8-2.5 3.1-4.3 5.8-4.3z" fill="#EA4335"/>
-                      {/* "Pay" Text */}
-                      <text x="26" y="15" fontSize="11" fontWeight="500" fill="currentColor">Pay</text>
-                    </svg>
-                  </div>
-                  
-                  {/* Crypto (Bitcoin icon only, no circle) */}
-                  <div className="h-8 w-auto flex-shrink-0">
-                    <Bitcoin className="h-8 w-auto text-orange-500" />
-                  </div>
-                </div>
-              ))}
+              {/* Payment methods will be added here */}
             </motion.div>
           </div>
         </div>
