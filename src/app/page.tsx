@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Masonry from "@/components/masonry";
+import Masonry from "@/components/mansory";
 import TiltedCard from "@/components/titltedcard";
 
 export default function Home() {
