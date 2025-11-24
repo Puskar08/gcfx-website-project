@@ -1081,22 +1081,11 @@ export default function Home() {
                     <Landmark className="h-8 w-auto text-blue-600 dark:text-blue-400" />
                   </div>
                   
-                  {/* Skrill - original brand logo (no border, no extra padding) */}
-                  <div className="h-8 w-auto flex-shrink-0 flex items-center">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Skrill_logo.svg"
-                      alt="Skrill"
-                      className="h-6 w-auto block"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                  
                   {/* Visa - With proper blue and gold colors */}
                   <div className="h-8 w-auto flex-shrink-0">
                     <svg className="h-8 w-auto" viewBox="0 0 60 20" fill="none">
                       {/* Visa logo with brand colors */}
-                      <path d="M24.2 3.5l-4.5 13h-3.5L19.8 3.5h3.4zm14.5 8.5c0-3.4-5.9-3.6-5.9-5.1 0-.5.5-.9 1.7-.9 1.4-.1 2.7.3 3.8.8l.7-3.3c-1.2-.5-2.5-.7-3.8-.7-4 0-6.9 2.1-6.9 5.2 0 2.3 2.1 3.5 3.7 4.3 1.6.8 2.2 1.3 2.2 2 0 1.1-1.3 1.6-2.6 1.6-1.7 0-3.3-.5-4.8-1.2l-.7 3.4c1.5.6 3.1 1 4.7 1 4.3.1 7.1-2.1 7.1-5.3zm10.2 4.5h3.1l-2.7-13h-2.8c-.6 0-1.2.4-1.5 1l-5.2 12h4.2l.8-2.3h5.2l.9 2.3zm-4.5-5.5l2.1-5.7 1.2 5.7h-3.3zM14.5 3.5L10.6 12.5l-.5-2.2c-.7-2.5-3.2-5.3-5.9-6.7l3.1 13.9h4.3l6.4-14h-3.1z" fill="#1434CB"/>
+                      <path d="M24.2 3.5l-4.5 13h-3.5L19.8 3.5h3.4zm14.5 8.5c0-3.4-5.9-3.6-5.9-5.1 0-.5.5-.9 1.7-.9 1.4-.1 2.7.3 3.8.8l.7-3.3c-1.2-.8-2.5-1.2-3.7-1.2-1.1 0-1.6.4-1.6.9 0 .7.8.9 2.4 1.5 3.9.9 6 2.5 6 5.7 0 3.6-2.9 6.1-7.5 6.1z"/>
                       <path d="M6.5 3.5H.1l-.1.5c5 1.2 8.3 4.2 9.7 7.8L8.2 4.6c-.3-1-.9-1.1-1.7-1.1z" fill="#F7B600"/>
                     </svg>
                   </div>
