@@ -1078,18 +1078,23 @@ export default function Home() {
                 <div key={`set-${setIndex}`} className="flex items-center gap-8">
                   {/* Bank Transfer */}
                   <div className="h-8 w-auto flex-shrink-0">
-                    <div className="h-8 w-8 rounded-lg bg-slate-500/20 border-2 border-slate-500/50 flex items-center justify-center">
-                      <Landmark className="w-5 h-5 text-slate-600 dark:text-slate-400" />
+                    <div className="h-8 px-3 rounded-lg bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-700 flex items-center justify-center gap-2">
+                      <Landmark className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                      <span className="text-xs font-semibold text-blue-700 dark:text-blue-300">Bank Transfer</span>
                     </div>
                   </div>
                   
-                  {/* Skrill - With proper logo */}
+                  {/* Skrill */}
                   <div className="h-8 w-auto flex-shrink-0">
-                    <svg className="h-8 w-auto" viewBox="0 0 120 40" fill="none">
-                      {/* Skrill logo with proper magenta color */}
-                      <path d="M15 8C8.925 8 4 12.925 4 19C4 25.075 8.925 30 15 30C21.075 30 26 25.075 26 19C26 12.925 21.075 8 15 8ZM15 26C11.14 26 8 22.86 8 19C8 15.14 11.14 12 15 12C18.86 12 22 15.14 22 19C22 22.86 18.86 26 15 26Z" fill="#862165"/>
-                      <text x="32" y="25" fontSize="16" fontWeight="700" fill="#862165">Skrill</text>
-                    </svg>
+                    <div className="h-8 px-3 rounded-lg bg-white dark:bg-white/95 flex items-center justify-center border border-gray-200">
+                      <svg className="h-6 w-auto" viewBox="0 0 70 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        {/* Skrill "S" symbol circle */}
+                        <circle cx="10" cy="10" r="8" fill="#862165"/>
+                        <path d="M7 13 L10 10 L7 7" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                        {/* Skrill text */}
+                        <text x="22" y="14" fontFamily="Arial, Helvetica, sans-serif" fontSize="11" fontWeight="700" fill="#862165">Skrill</text>
+                      </svg>
+                    </div>
                   </div>
                   
                   {/* Visa - With proper blue and gold colors */}
