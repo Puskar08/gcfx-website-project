@@ -128,6 +128,7 @@ export const Navbar = () => {
   const { theme, setTheme } = useTheme();
 
   const navItems = [
+    { label: "Home", href: "/" },
     { label: "Markets", href: "/markets" },
     { label: "Tools", href: "/tools" },
     { label: "Partners", href: "/partners" },
