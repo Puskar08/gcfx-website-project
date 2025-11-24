@@ -1090,45 +1090,45 @@ export default function Home() {
               {/* First Set */}
               {[
                 // Teller
-                <div key="teller-1" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="teller-1" className="h-8 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
                     <text x="0" y="20" fontSize="20" fontWeight="bold">TELLER</text>
                   </svg>
                 </div>,
                 // Skrill
-                <div key="skrill-1" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="skrill-1" className="h-8 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-8 w-auto" viewBox="0 0 100 30" fill="currentColor">
                     <text x="0" y="20" fontSize="18" fontWeight="bold">Skrill</text>
                   </svg>
                 </div>,
                 // Visa
-                <div key="visa-1" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="visa-1" className="h-8 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-8 w-auto" viewBox="0 0 48 16" fill="currentColor">
                     <path d="M19.6 1.3l-3.6 13.4h-2.8L16.8 1.3h2.8zm11.6 8.7c0-3.5-4.8-3.7-4.8-5.2 0-.5.4-.9 1.4-.9 1.1-.1 2.2.2 3.1.7l.6-2.7c-1-.4-2-.6-3.1-.6-3.3 0-5.6 1.8-5.6 4.3 0 1.9 1.7 2.9 3 3.5s1.8 1.1 1.8 1.7c0 .9-1.1 1.3-2.1 1.3-1.4 0-2.7-.4-3.9-1l-.6 2.8c1.2.5 2.5.8 3.8.8 3.5.1 5.8-1.7 5.8-4.4zm8.3 4.7h2.5l-2.2-13.4h-2.3c-.5 0-1 .3-1.2.8L30 14.7h3.4l.7-1.9h4.2l.2 1.9zm-3.7-4.5l1.7-4.7 1 4.7h-2.7zM12.6 1.3L9.2 10.5l-.4-1.8c-.6-2.1-2.6-4.4-4.8-5.5l2.5 11.5h3.5l5.2-13.4h-2.6z"/>
                   </svg>
                 </div>,
                 // Mastercard
-                <div key="mastercard-1" className="h-10 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="mastercard-1" className="h-10 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-10 w-auto" viewBox="0 0 48 32" fill="none">
-                    <circle cx="16" cy="16" r="12" fill="#EB001B" opacity="0.8"/>
-                    <circle cx="32" cy="16" r="12" fill="#F79E1B" opacity="0.8"/>
+                    <circle cx="16" cy="16" r="12" fill="#EB001B"/>
+                    <circle cx="32" cy="16" r="12" fill="#F79E1B"/>
                   </svg>
                 </div>,
                 // PayPal
-                <div key="paypal-1" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="paypal-1" className="h-8 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-8 w-auto" viewBox="0 0 100 30" fill="currentColor">
                     <text x="0" y="20" fontSize="18" fontWeight="bold">PayPal</text>
                   </svg>
                 </div>,
                 // Apple Pay
-                <div key="apple-1" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="apple-1" className="h-8 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-8 w-auto" viewBox="0 0 48 20" fill="currentColor">
                     <path d="M10.5 4.3c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.7-1.1 1.7-1 2.6 1 .1 2-.5 2.7-1.2zm.9 1.4c-1.5-.1-2.7.8-3.4.8s-1.8-.8-3-.8c-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.7 2.3 2.9 2.3 1.1 0 1.6-.7 3-.7s1.8.7 3 .7c1.2 0 2.1-1.1 2.9-2.2.9-1.3 1.3-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.7 0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8v.2z"/>
                     <text x="24" y="14" fontSize="10" fontWeight="500">Pay</text>
                   </svg>
                 </div>,
                 // Google Pay
-                <div key="google-1" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="google-1" className="h-8 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-8 w-auto" viewBox="0 0 48 20" fill="currentColor">
                     <path d="M23.7 10.7v4.5h-1.5V4.8h4c1 0 1.9.3 2.6 1 .7.6 1.1 1.5 1.1 2.4 0 1-.4 1.8-1.1 2.4-.7.7-1.6 1-2.6 1h-2.5zm0-4.4v3h2.5c.6 0 1.1-.2 1.5-.6.4-.4.6-.9.6-1.4 0-.6-.2-1.1-.6-1.5-.4-.4-.9-.6-1.5-.6h-2.5zm10.1 2c1 0 1.9.4 2.5 1 .7.6 1 1.5 1 2.5v4.4h-1.4v-1c-.6.8-1.4 1.2-2.5 1.2-.9 0-1.6-.3-2.2-.8-.6-.5-.9-1.2-.9-2 0-.9.3-1.5.9-2 .6-.5 1.4-.7 2.4-.7.9 0 1.6.2 2.2.5v-.3c0-.6-.2-1.1-.7-1.4-.4-.4-1-.6-1.6-.6-.8 0-1.5.3-2 1l-1.3-.8c.8-1 1.9-1.5 3.3-1.5h.3zm-2.2 6.3c0 .4.2.8.5 1.1.4.3.8.5 1.3.5.7 0 1.3-.3 1.8-.7.5-.5.8-1.1.8-1.7-.5-.4-1.2-.6-2.1-.6-.6 0-1.1.2-1.5.5-.4.2-.7.6-.7 1v-.1z"/>
                     <path fill="#4285F4" d="M19.7 10c0-.5 0-1-.1-1.5H11v2.8h4.9c-.2 1.1-.8 2-1.7 2.6v2.2h2.7c1.6-1.5 2.5-3.7 2.5-6.3l.3.2z"/>
@@ -1138,60 +1138,60 @@ export default function Home() {
                   </svg>
                 </div>,
                 // Crypto
-                <div key="crypto-1" className="h-10 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                  <div className="w-10 h-10 rounded-full bg-white/10 border-2 border-white/30 flex items-center justify-center">
-                    <Bitcoin className="w-6 h-6 text-white" />
+                <div key="crypto-1" className="h-10 w-auto flex-shrink-0 transition-all duration-300">
+                  <div className="w-10 h-10 rounded-full bg-orange-500/20 border-2 border-orange-500/50 flex items-center justify-center">
+                    <Bitcoin className="w-6 h-6 text-orange-500" />
                   </div>
                 </div>,
                 // Bank
-                <div key="bank-1" className="h-10 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                  <div className="w-10 h-10 rounded-full bg-white/10 border-2 border-white/30 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <div key="bank-1" className="h-10 w-auto flex-shrink-0 transition-all duration-300">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/20 border-2 border-blue-500/50 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                       <rect x="3" y="11" width="18" height="10" rx="2" strokeWidth="2"/>
                       <path d="M7 11V7a5 5 0 0 1 10 0v4" strokeWidth="2" strokeLinecap="round"/>
                     </svg>
                   </div>
                 </div>,
                 // NETELLER
-                <div key="neteller-1" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="neteller-1" className="h-8 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
                     <text x="0" y="20" fontSize="16" fontWeight="bold">NETELLER</text>
                   </svg>
                 </div>,
                 // Second Set (duplicate for seamless loop)
-                <div key="teller-2" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="teller-2" className="h-8 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
                     <text x="0" y="20" fontSize="20" fontWeight="bold">TELLER</text>
                   </svg>
                 </div>,
-                <div key="skrill-2" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="skrill-2" className="h-8 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-8 w-auto" viewBox="0 0 100 30" fill="currentColor">
                     <text x="0" y="20" fontSize="18" fontWeight="bold">Skrill</text>
                   </svg>
                 </div>,
-                <div key="visa-2" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="visa-2" className="h-8 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-8 w-auto" viewBox="0 0 48 16" fill="currentColor">
                     <path d="M19.6 1.3l-3.6 13.4h-2.8L16.8 1.3h2.8zm11.6 8.7c0-3.5-4.8-3.7-4.8-5.2 0-.5.4-.9 1.4-.9 1.1-.1 2.2.2 3.1.7l.6-2.7c-1-.4-2-.6-3.1-.6-3.3 0-5.6 1.8-5.6 4.3 0 1.9 1.7 2.9 3 3.5s1.8 1.1 1.8 1.7c0 .9-1.1 1.3-2.1 1.3-1.4 0-2.7-.4-3.9-1l-.6 2.8c1.2.5 2.5.8 3.8.8 3.5.1 5.8-1.7 5.8-4.4zm8.3 4.7h2.5l-2.2-13.4h-2.3c-.5 0-1 .3-1.2.8L30 14.7h3.4l.7-1.9h4.2l.2 1.9zm-3.7-4.5l1.7-4.7 1 4.7h-2.7zM12.6 1.3L9.2 10.5l-.4-1.8c-.6-2.1-2.6-4.4-4.8-5.5l2.5 11.5h3.5l5.2-13.4h-2.6z"/>
                   </svg>
                 </div>,
-                <div key="mastercard-2" className="h-10 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="mastercard-2" className="h-10 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-10 w-auto" viewBox="0 0 48 32" fill="none">
-                    <circle cx="16" cy="16" r="12" fill="#EB001B" opacity="0.8"/>
-                    <circle cx="32" cy="16" r="12" fill="#F79E1B" opacity="0.8"/>
+                    <circle cx="16" cy="16" r="12" fill="#EB001B"/>
+                    <circle cx="32" cy="16" r="12" fill="#F79E1B"/>
                   </svg>
                 </div>,
-                <div key="paypal-2" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="paypal-2" className="h-8 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-8 w-auto" viewBox="0 0 100 30" fill="currentColor">
                     <text x="0" y="20" fontSize="18" fontWeight="bold">PayPal</text>
                   </svg>
                 </div>,
-                <div key="apple-2" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="apple-2" className="h-8 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-8 w-auto" viewBox="0 0 48 20" fill="currentColor">
                     <path d="M10.5 4.3c.6-.7 1-1.7.9-2.7-.9 0-2 .6-2.6 1.3-.6.7-1.1 1.7-1 2.6 1 .1 2-.5 2.7-1.2zm.9 1.4c-1.5-.1-2.7.8-3.4.8s-1.8-.8-3-.8c-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .8 1.1 1.7 2.3 2.9 2.3 1.1 0 1.6-.7 3-.7s1.8.7 3 .7c1.2 0 2.1-1.1 2.9-2.2.9-1.3 1.3-2.5 1.3-2.6-.1 0-2.5-1-2.5-3.7 0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8v.2z"/>
                     <text x="24" y="14" fontSize="10" fontWeight="500">Pay</text>
                   </svg>
                 </div>,
-                <div key="google-2" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="google-2" className="h-8 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-8 w-auto" viewBox="0 0 48 20" fill="currentColor">
                     <path d="M23.7 10.7v4.5h-1.5V4.8h4c1 0 1.9.3 2.6 1 .7.6 1.1 1.5 1.1 2.4 0 1-.4 1.8-1.1 2.4-.7.7-1.6 1-2.6 1h-2.5zm0-4.4v3h2.5c.6 0 1.1-.2 1.5-.6.4-.4.6-.9.6-1.4 0-.6-.2-1.1-.6-1.5-.4-.4-.9-.6-1.5-.6h-2.5zm10.1 2c1 0 1.9.4 2.5 1 .7.6 1 1.5 1 2.5v4.4h-1.4v-1c-.6.8-1.4 1.2-2.5 1.2-.9 0-1.6-.3-2.2-.8-.6-.5-.9-1.2-.9-2 0-.9.3-1.5.9-2 .6-.5 1.4-.7 2.4-.7.9 0 1.6.2 2.2.5v-.3c0-.6-.2-1.1-.7-1.4-.4-.4-1-.6-1.6-.6-.8 0-1.5.3-2 1l-1.3-.8c.8-1 1.9-1.5 3.3-1.5h.3zm-2.2 6.3c0 .4.2.8.5 1.1.4.3.8.5 1.3.5.7 0 1.3-.3 1.8-.7.5-.5.8-1.1.8-1.7-.5-.4-1.2-.6-2.1-.6-.6 0-1.1.2-1.5.5-.4.2-.7.6-.7 1v-.1z"/>
                     <path fill="#4285F4" d="M19.7 10c0-.5 0-1-.1-1.5H11v2.8h4.9c-.2 1.1-.8 2-1.7 2.6v2.2h2.7c1.6-1.5 2.5-3.7 2.5-6.3l.3.2z"/>
@@ -1200,20 +1200,20 @@ export default function Home() {
                     <path fill="#EA4335" d="M11 5.2c1.2 0 2.3.4 3.2 1.2l2.4-2.4C15.2 2.7 13.2 2 11 2 7.7 2 4.8 4.1 3.4 7.4l2.8 2.2c.7-2.1 2.6-3.6 4.8-3.6v.2z"/>
                   </svg>
                 </div>,
-                <div key="crypto-2" className="h-10 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                  <div className="w-10 h-10 rounded-full bg-white/10 border-2 border-white/30 flex items-center justify-center">
-                    <Bitcoin className="w-6 h-6 text-white" />
+                <div key="crypto-2" className="h-10 w-auto flex-shrink-0 transition-all duration-300">
+                  <div className="w-10 h-10 rounded-full bg-orange-500/20 border-2 border-orange-500/50 flex items-center justify-center">
+                    <Bitcoin className="w-6 h-6 text-orange-500" />
                   </div>
                 </div>,
-                <div key="bank-2" className="h-10 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                  <div className="w-10 h-10 rounded-full bg-white/10 border-2 border-white/30 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <div key="bank-2" className="h-10 w-auto flex-shrink-0 transition-all duration-300">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/20 border-2 border-blue-500/50 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                       <rect x="3" y="11" width="18" height="10" rx="2" strokeWidth="2"/>
                       <path d="M7 11V7a5 5 0 0 1 10 0v4" strokeWidth="2" strokeLinecap="round"/>
                     </svg>
                   </div>
                 </div>,
-                <div key="neteller-2" className="h-8 w-auto flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key="neteller-2" className="h-8 w-auto flex-shrink-0 transition-all duration-300">
                   <svg className="h-8 w-auto" viewBox="0 0 120 30" fill="currentColor">
                     <text x="0" y="20" fontSize="16" fontWeight="bold">NETELLER</text>
                   </svg>
