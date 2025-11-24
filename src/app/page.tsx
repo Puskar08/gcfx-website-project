@@ -1079,7 +1079,7 @@ export default function Home() {
                   key={`set1-${index}`}
                   className="w-32 h-20 flex-shrink-0 overflow-hidden"
                 >
-                  <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" strokeWidth={0} fill="currentColor" />
+                  <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" strokeWidth={2} fill="none" stroke="currentColor" />
                 </div>
               ))}
               {/* Second set of items for seamless loop */}
@@ -1088,7 +1088,7 @@ export default function Home() {
                   key={`set2-${index}`}
                   className="w-32 h-20 flex-shrink-0 overflow-hidden"
                 >
-                  <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" strokeWidth={0} fill="currentColor" />
+                  <Landmark className="w-full h-full text-slate-700 dark:text-slate-300" strokeWidth={2} fill="none" stroke="currentColor" />
                 </div>
               ))}
             </motion.div>
