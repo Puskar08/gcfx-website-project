@@ -99,7 +99,7 @@ export default function Home() {
             raysSpeed={1.5}
             lightSpread={1}
             rayLength={3}
-            fadedistance={2}
+            fadeDistance={2}
             followMouse={true}
             mouseInfluence={0.2}
             noiseAmount={0.5}
