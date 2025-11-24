@@ -94,13 +94,13 @@ export default function Home() {
       <section className="min-h-screen flex items-center justify-center relative pt-16 overflow-hidden">
         <div className="absolute inset-0 w-full h-full -z-10">
           <LightRays
-            raysOrigin="top-center"
+            raysOrigin="bottom-center"
             raysColor="#00ffff"
             raysSpeed={1.5}
-            lightSpread={0.8}
-            rayLength={1.2}
+            lightSpread={1}
+            rayLength={1.5}
             followMouse={true}
-            mouseInfluence={0.1}
+            mouseInfluence={0.2}
             noiseAmount={0.1}
             distortion={0.05}
             className="w-full h-full"
